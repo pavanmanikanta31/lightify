@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lightify"
+version = "1.0.0"
+description = "Latency-aware, memory-driven multi-model inference with graph context and adaptive compression"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["rich"]
+
+[project.scripts]
+lightify = "lightify.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["lightify*", "benches*"]

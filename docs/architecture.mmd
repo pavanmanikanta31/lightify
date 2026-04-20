@@ -1,0 +1,68 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#4A90D9', 'primaryTextColor': '#fff', 'primaryBorderColor': '#2E6DA4', 'lineColor': '#5C6370', 'secondaryColor': '#61AFEF', 'tertiaryColor': '#E5C07B'}}}%%
+
+graph TD
+    subgraph Input
+        Q["User Query"]
+    end
+
+    subgraph Stage1["Stage 1: Context Retrieval"]
+        MEM["Persistent Memory Store<br/>(SQLite + FTS5)"]
+        FTS["Full-Text Search"]
+        TOP["Topic Index Lookup"]
+    end
+
+    subgraph Stage2["Stage 2: Context Processing"]
+        CB["Context Builder<br/>(Filter + Rank + Compress)"]
+        CSE["CSE: Context Sufficiency<br/>Estimation"]
+        MCD["MCD: Memory Conflict<br/>Detection"]
+        CDPS["CDPS: Confidence-Driven<br/>Prompt Shaping"]
+        SECR["SECR: Self-Evolving<br/>Compression Rules"]
+    end
+
+    subgraph Stage3["Stage 3: Routing & Inference"]
+        CDDR["CDDR: Confidence-Driven<br/>Dynamic Router"]
+        T1["Tier 1: Local SLM<br/>(Ollama, $0)"]
+        T2["Tier 2: Claude Sonnet<br/>(API, $$)"]
+        T3["Tier 3: Claude Opus<br/>(API, $$$)"]
+    end
+
+    subgraph Output
+        R["Response"]
+    end
+
+    Q --> FTS
+    Q --> TOP
+    FTS --> MEM
+    TOP --> MEM
+    MEM --> CB
+    CB --> CSE
+    CSE --> MCD
+    MCD --> CDPS
+    CDPS --> SECR
+    SECR --> CDDR
+
+    CDDR -->|"High Confidence<br/>+ Sufficient"| T1
+    CDDR -->|"Moderate Confidence<br/>OR Conflicts"| T2
+    CDDR -->|"Low Confidence<br/>OR Critical Conflicts"| T3
+
+    T1 -->|"Cascade on failure"| T2
+    T2 -->|"Cascade on failure"| T3
+
+    T1 --> R
+    T2 --> R
+    T3 --> R
+
+    R -.->|"Background Learning:<br/>Update usage stats,<br/>evolve SECR rules"| MEM
+
+    style Q fill:#4A90D9,stroke:#2E6DA4,color:#fff
+    style MEM fill:#61AFEF,stroke:#2E6DA4,color:#fff
+    style CB fill:#98C379,stroke:#50A14F,color:#fff
+    style CSE fill:#98C379,stroke:#50A14F,color:#fff
+    style MCD fill:#E06C75,stroke:#BE5046,color:#fff
+    style CDPS fill:#E5C07B,stroke:#D19A66,color:#000
+    style SECR fill:#C678DD,stroke:#A626A4,color:#fff
+    style CDDR fill:#56B6C2,stroke:#0184BC,color:#fff
+    style T1 fill:#98C379,stroke:#50A14F,color:#fff
+    style T2 fill:#E5C07B,stroke:#D19A66,color:#000
+    style T3 fill:#E06C75,stroke:#BE5046,color:#fff
+    style R fill:#4A90D9,stroke:#2E6DA4,color:#fff

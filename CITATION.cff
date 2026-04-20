@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Lightify: Knowledge-Aware Model Routing via Temporal Consistency of Persistent Memory for LLM Inference Optimization"
+authors:
+  - family-names: Maddula
+    given-names: Pavan
+    orcid: "https://orcid.org/0009-0000-5756-100X"
+    email: pavan3196m@gmail.com
+type: software
+license: MIT
+version: "1.0.0"
+date-released: "2026-04-17"
+repository-code: "https://github.com/pavanmanikanta31/lightify"
+keywords:
+  - knowledge-aware routing
+  - model selection
+  - temporal consistency
+  - persistent memory
+  - conflict detection
+  - local inference
+  - retrieval-augmented generation
+  - llm inference optimization
+preferred-citation:
+  type: article
+  title: "Lightify: Knowledge-Aware Model Routing via Temporal Consistency of Persistent Memory for LLM Inference Optimization"
+  authors:
+    - family-names: Maddula
+      given-names: Pavan
+      orcid: "https://orcid.org/0009-0000-5756-100X"
+  year: 2026
+  url: "https://arxiv.org/abs/XXXX.XXXXX"
+  journal: "arXiv preprint"
