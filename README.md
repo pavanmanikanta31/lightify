@@ -10,12 +10,20 @@ Lightify is the first model routing system that conditions tier selection on the
 
 ## Key Results
 
+Benchmarks were run in April 2026 against these specific model versions (resolved from Claude CLI aliases at test time):
+
+| Tier | Alias | Model Version |
+|------|-------|---------------|
+| Tier-1 (local) | `gemma3:1b` | Gemma 3 (1B, Ollama) |
+| Tier-2 (mid) | `haiku` / `sonnet` | Claude Haiku 4.5 / Sonnet 4.6 |
+| Tier-3 (frontier) | `opus` | Claude Opus 4.6 |
+
 | Approach | Cost | Latency | Tokens Out |
 |----------|------|---------|------------|
-| Raw Claude Opus | $0.076 | 5,425 ms | 272 |
-| Always Sonnet | $0.078 | 7,449 ms | 344 |
-| Always Haiku | $0.017 | 4,275 ms | 346 |
-| Local Gemma 3 | $0.000 | 6,741 ms | 1,004 |
+| Raw Claude Opus 4.6 | $0.076 | 5,425 ms | 272 |
+| Always Sonnet 4.6 | $0.078 | 7,449 ms | 344 |
+| Always Haiku 4.5 | $0.017 | 4,275 ms | 346 |
+| Local Gemma 3 (1B) | $0.000 | 6,741 ms | 1,004 |
 | **Lightify** | **$0.000** | **339 ms** | **22** |
 
 On high-confidence queries with stable knowledge, Lightify routes to local models at **zero API cost** and reduces latency by **92%**. Confidence-Driven Prompt Shaping (CDPS) produces focused answers, reducing output tokens by up to **46x**.
