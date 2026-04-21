@@ -8,7 +8,7 @@ from __future__ import annotations
 import json
 import os
 
-APP_DIR = os.path.expanduser("~/.lightify")
+APP_DIR = os.environ.get("LIGHTIFY_HOME") or os.path.expanduser("~/.lightify")
 CONFIG_PATH = os.path.join(APP_DIR, "config.json")
 
 # ── Defaults ──────────────────────────────────────────────────────────────

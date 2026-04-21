@@ -26,7 +26,7 @@ import time
 
 # ── Constants ─────────────────────────────────────────────────────────────
 
-APP_DIR = os.path.expanduser("~/.lightify")
+APP_DIR = os.environ.get("LIGHTIFY_HOME") or os.path.expanduser("~/.lightify")
 DB_PATH = os.path.join(APP_DIR, "memory.db")
 CONFIG_PATH = os.path.join(APP_DIR, "config.json")
 VERSION = "1.0.0"
