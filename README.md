@@ -1,10 +1,10 @@
-# Lightify
+# Lightify: Cost-Aware Adaptive LLM Routing via Retrieval Confidence and Conflict-Aware Escalation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-brightgreen.svg)](https://www.python.org/downloads/)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--5756--100X-a6ce39?logo=orcid)](https://orcid.org/0009-0000-5756-100X)
 
-**Cost-aware LLM orchestration middleware for agent harnesses.**
+**Cost-aware adaptive LLM routing middleware for agent harnesses.**
 
 Modern agent harnesses (Claude Agent SDK, LangGraph, AutoGen, CrewAI, OpenHands, LlamaIndex Agents) leave cost governance, local-first inference, and memory conflict handling entirely to the application developer. Lightify is an open-source middleware layer that provides these as runtime primitives beneath any agent loop.
 
@@ -248,17 +248,16 @@ tests/
 
 ## Paper
 
-> **Lightify: Cost-Aware LLM Orchestration via Retrieval-Confidence Routing, Conflict Detection, and Local-First Inference**
+> **Lightify: Cost-Aware Adaptive LLM Routing via Retrieval Confidence and Conflict-Aware Escalation**
 > Pavan Maddula [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--5756--100X-a6ce39?logo=orcid)](https://orcid.org/0009-0000-5756-100X). *IEEE Access*, 2026.
 
 ```bibtex
 @article{maddula2026lightify,
-  title   = {Lightify: Cost-Aware {LLM} Orchestration via Retrieval-Confidence
-             Routing, Conflict Detection, and Local-First Inference},
+  title   = {Lightify: Cost-Aware Adaptive {LLM} Routing via Retrieval Confidence
+             and Conflict-Aware Escalation},
   author  = {Maddula, Pavan},
   journal = {IEEE Access},
-  year    = {2026},
-  note    = {Under review}
+  year    = {2026}
 }
 ```
 
