@@ -35,19 +35,21 @@ SQLite FTS5 Memory  ──►  Context Confidence Φ(C)
 
 Evaluated on 1,197,316 real user queries from five public corpora (MS MARCO v2.1, WildChat-1M, Natural Questions, MMLU, GSM8K) — all exact-string unique, none authored by us.
 
-| Policy | Policy-Oracle Agreement | Cost/query | vs Opus-only |
+| Policy | Policy-Oracle Agreement | Cost/query | Cost vs Opus-only |
 |---|---|---|---|
-| **Lightify CDDR** (English subset, N=1.04M) | **0.958 [0.957, 0.958]** | **$0.0012** | **−98%** |
-| Lightify CDDR (all 1.2M incl. non-English) | 0.913 [0.912, 0.913] | $0.0025 | −96% |
-| Hand-coded keyword router | 0.794 | $0.0007 | −99% |
+| Naïve Opus-only baseline *(reference)* | 0.000 | $0.076 | — |
 | Hand-coded length gateway | 0.324 | $0.0196 | −74% |
-| Naïve Opus-only baseline | 0.000 | $0.076 | — |
+| Hand-coded keyword router | 0.794 | $0.0007 | −99% |
+| Lightify CDDR (all 1.2M incl. non-English) | 0.913 [0.912, 0.913] | $0.0025 | −96% |
+| **Lightify CDDR** (English subset, N=1.04M) | **0.958 [0.957, 0.958]** | **$0.0012** | **−98%** |
+
+> **Reading the table:** Opus-only is the cost baseline (−0%). The keyword router is cheapest (−99%) because it routes nearly everything to Tier-1, but its POA drops to 0.794. Lightify achieves 0.958 POA at −98% cost — more accurate than any baseline while still 98% cheaper than Opus-only. Cost and POA must be read together; a cheaper policy that routes incorrectly is not a win.
 
 Per-source breakdown: MS MARCO / NQ / MMLU = 1.000 (factoid-lookup dominated); WildChat (English) = 0.625; GSM8K = 0.607. Non-English WildChat subset (N=154K) = 0.604.
 
 English subset = queries with pure ASCII text (N=1,043,220); non-English = WildChat queries containing non-ASCII characters (N=154,096).
 
-*Policy-Oracle Agreement (POA) measures routing-decision agreement with a category-level oracle, not per-query output correctness. Per-query cost is a tier-cost projection applied to routing decisions, not measured API spend on 1.2M queries; live spend is reported only in the paper's §V.A 20-query pilot.*
+*Policy-Oracle Agreement (POA) measures routing-decision agreement with a category-level oracle, not per-query output correctness. Per-query cost is a tier-cost projection applied to routing decisions, not measured API spend on 1.2M queries; live spend is reported only in the paper's §V.C 20-query pilot.*
 
 **MCD stress test** (200 pairs: 100 contradictions + 100 controls): Precision 0.943 [0.814, 0.984], Recall 0.330 [0.246, 0.427]. High-precision within its lexical signal set (numeric ratio, 32-entry antonym dict, negation detector).
 
@@ -189,7 +191,7 @@ tests/
 ## Paper
 
 > **Lightify: Cost-Aware LLM Orchestration via Retrieval-Confidence Routing, Conflict Detection, and Local-First Inference**
-> Pavan Maddula. *IEEE Access*, 2026 (under review).
+> Pavan Maddula [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--5756--100X-a6ce39?logo=orcid)](https://orcid.org/0009-0000-5756-100X). *IEEE Access*, 2026 (under review).
 > [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)
 
 ```bibtex
