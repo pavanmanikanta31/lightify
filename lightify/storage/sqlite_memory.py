@@ -63,6 +63,21 @@ CREATE TRIGGER IF NOT EXISTS memory_ad AFTER DELETE ON memory BEGIN
     INSERT INTO memory_fts(memory_fts, rowid, content, topic)
         VALUES('delete', old.id, old.content, old.topic);
 END;
+
+CREATE TABLE IF NOT EXISTS trace (
+    id            INTEGER PRIMARY KEY,
+    ts            INTEGER NOT NULL,
+    query_hash    TEXT NOT NULL,
+    tier_chosen   TEXT NOT NULL,
+    tier_reason   TEXT,
+    cascaded      INTEGER NOT NULL DEFAULT 0,
+    cost_usd      REAL NOT NULL DEFAULT 0.0,
+    tokens_in     INTEGER NOT NULL DEFAULT 0,
+    tokens_out    INTEGER NOT NULL DEFAULT 0,
+    latency_ms    REAL NOT NULL DEFAULT 0.0,
+    success       INTEGER NOT NULL DEFAULT 0
+);
+CREATE INDEX IF NOT EXISTS idx_trace_ts ON trace(ts);
 """
 
 
@@ -238,6 +253,32 @@ class MemoryStore:
     def count(self) -> int:
         with self._read_conn() as conn:
             return conn.execute("SELECT COUNT(*) FROM memory").fetchone()[0]
+
+    def insert_trace(
+        self, *, query_hash: str, tier_chosen: str, tier_reason: str,
+        cascaded: bool, cost_usd: float, tokens_in: int, tokens_out: int,
+        latency_ms: float, success: bool,
+    ) -> None:
+        with self._write_lock:
+            self._write_conn.execute(
+                """INSERT INTO trace
+                   (ts, query_hash, tier_chosen, tier_reason, cascaded, cost_usd,
+                    tokens_in, tokens_out, latency_ms, success)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                (int(time.time()), query_hash, tier_chosen, tier_reason,
+                 1 if cascaded else 0, cost_usd, tokens_in, tokens_out,
+                 latency_ms, 1 if success else 0),
+            )
+            self._write_conn.commit()
+
+    def spend_since(self, ts_since: int) -> float:
+        """Sum cost_usd across trace rows with ts >= ts_since."""
+        with self._read_conn() as conn:
+            row = conn.execute(
+                "SELECT COALESCE(SUM(cost_usd), 0.0) FROM trace WHERE ts >= ?",
+                (ts_since,),
+            ).fetchone()
+        return float(row[0])
 
     def close(self) -> None:
         self._write_conn.close()

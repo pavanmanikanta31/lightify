@@ -45,13 +45,17 @@ class PipelineConfig:
     top_k: int = 5
     max_cascade_steps: int = 3
     parallel_dispatch: bool = False
+    action_routing: bool = False
 
 
 class LightifyPipeline:
     def __init__(self, store: MemoryStore, config: PipelineConfig | None = None):
         self.store = store
         self.config = config or PipelineConfig()
-        self.router = Router(parallel_dispatch=self.config.parallel_dispatch)
+        self.router = Router(
+            parallel_dispatch=self.config.parallel_dispatch,
+            enable_action_routing=self.config.action_routing,
+        )
         self.secr = SECREngine()
         self._response_cache: dict[str, PipelineResult] = {}
 
@@ -167,8 +171,8 @@ class LightifyPipeline:
             shaped_prompt = self.secr.apply(shaped_prompt)
             self.secr.observe(shaped_prompt)
 
-        # CDDR: Route to model tier
-        route = self.router.route(capsule)
+        # CDDR: Route to model tier (with optional per-action overlay)
+        route = self.router.route(capsule, query=query)
 
         # Execute with cascade
         tiers_attempted = []

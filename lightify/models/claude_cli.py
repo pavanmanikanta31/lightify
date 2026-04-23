@@ -31,10 +31,14 @@ def invoke_claude(
     system_prompt: str | None = None,
     max_turns: int = 1,
     timeout_s: int = 120,
+    max_budget_usd: float | None = None,
 ) -> ModelResponse:
     """Invoke Claude CLI and return structured response with metrics.
 
     Uses `claude -p --bare --output-format json` for clean, measurable calls.
+
+    If max_budget_usd is not None, it is forwarded to Claude via
+    --max-budget-usd so the CLI refuses a call that would exceed the cap.
     """
     model = _TIER_TO_MODEL[tier]
     t_start = time.time()
@@ -47,6 +51,9 @@ def invoke_claude(
         "--no-session-persistence",
         "--max-turns", str(max_turns),
     ]
+
+    if max_budget_usd is not None and max_budget_usd > 0:
+        cmd.extend(["--max-budget-usd", f"{max_budget_usd:.6f}"])
 
     if system_prompt:
         cmd.extend(["--append-system-prompt", system_prompt])

@@ -4,353 +4,205 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-brightgreen.svg)](https://www.python.org/downloads/)
 [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 
-**Knowledge-aware model routing for LLM inference optimization.**
+**Cost-aware LLM orchestration middleware for agent harnesses.**
 
-Lightify is the first model routing system that conditions tier selection on the *temporal consistency* of a persistent knowledge base. Instead of asking "Is this question hard?", Lightify asks "Is our knowledge about this topic still consistent?" -- routing to cheap local models when context is reliable and escalating to frontier models when contradictions are detected.
+Modern agent harnesses (Claude Agent SDK, LangGraph, AutoGen, CrewAI, OpenHands, LlamaIndex Agents) leave cost governance, local-first inference, and memory conflict handling entirely to the application developer. Lightify is an open-source middleware layer that provides these as runtime primitives beneath any agent loop.
 
-## Key Results
+## How it works
 
-Benchmarks were run in April 2026 against these specific model versions (resolved from Claude CLI aliases at test time):
-
-| Tier | Alias | Model Version |
-|------|-------|---------------|
-| Tier-1 (local) | `gemma3:1b` | Gemma 3 (1B, Ollama) |
-| Tier-2 (mid) | `haiku` / `sonnet` | Claude Haiku 4.5 / Sonnet 4.6 |
-| Tier-3 (frontier) | `opus` | Claude Opus 4.6 |
-
-| Approach | Cost | Latency | Tokens Out |
-|----------|------|---------|------------|
-| Raw Claude Opus 4.6 | $0.076 | 5,425 ms | 272 |
-| Always Sonnet 4.6 | $0.078 | 7,449 ms | 344 |
-| Always Haiku 4.5 | $0.017 | 4,275 ms | 346 |
-| Local Gemma 3 (1B) | $0.000 | 6,741 ms | 1,004 |
-| **Lightify** | **$0.000** | **339 ms** | **22** |
-
-On high-confidence queries with stable knowledge, Lightify routes to local models at **zero API cost** and reduces latency by **92%**. Confidence-Driven Prompt Shaping (CDPS) produces focused answers, reducing output tokens by up to **46x**.
-
-## Architecture
-
-Lightify operates as a three-stage pipeline: **Context Retrieval**, **Context Processing**, and **Routing & Inference**.
+Lightify routes each query to the cheapest model tier that can handle it reliably:
 
 ```
-                         LIGHTIFY PIPELINE
-  ================================================================
-
-  User Query
-       |
-       v
-  +--------------------+
-  | PERSISTENT MEMORY   |  SQLite + FTS5, confidence-scored entries,
-  | (Retrieval)         |  content-hash dedup, WAL mode
-  +--------------------+
-       |
-       v
-  +--------------------+
-  | CONTEXT BUILDER     |  Filter (word-boundary topic match)
-  | (Rank + Compress)   |  Rank  (Jaccard + recency + confidence)
-  |                     |  Compress (code-block-aware stopword removal)
-  +--------------------+
-       |
-       v
-  +--------------------+
-  | CSE                 |  Context Sufficiency Estimation
-  | S(C,q) = 1 iff     |  Coverage >= sigma AND Phi(C) >= sigma_conf
-  +--------------------+
-       |
-       v
-  +--------------------+
-  | MCD                 |  Memory Conflict Detection
-  | (Negation,          |  Detects temporal contradictions across
-  |  Numerical,         |  retrieved items; penalizes confidence
-  |  Antonym)           |  and forces tier escalation
-  +--------------------+
-       |
-       v
-  +--------------------+
-  | CDPS                |  Confidence-Driven Prompt Shaping
-  | High  -> concise    |  Adapts prompt template to knowledge
-  | Med   -> cite ctx   |  reliability (3 templates)
-  | Low   -> meta-cog   |
-  +--------------------+
-       |
-       v
-  +--------------------+
-  | SECR                |  Self-Evolving Compression Rules
-  | (learns shorthands  |  Learns frequent phrases -> abbreviations
-  |  from patterns)     |  over time
-  +--------------------+
-       |
-       v
-  +--------------------+
-  | CDDR ROUTER         |  Confidence-Driven Dynamic Routing
-  | R(q,C) = t_j where  |  R(q,C) = t_j where j = min{m: Phi(C) >= tau_m}
-  | j = min{...}        |  tau_1 = 0.45, tau_2 = 0.30
-  +----+---+---+--------+
-       |   |   |
-       v   v   v
-  +------+ +------+ +----------+
-  |Tier 1| |Tier 2| |  Tier 3  |
-  |Local | |Sonnet| |  Opus    |
-  |SLM   | |(API) | | (API)    |
-  |$0    | |$$    | | $$$      |
-  +------+ +------+ +----------+
-       \     |     /
-        v    v    v
-       Response
-           |
-           v  (background)
-       Update memory usage stats
-       Evolve SECR rules
+User Query
+    │
+    ▼
+SQLite FTS5 Memory  ──►  Context Confidence Φ(C)
+    │
+    ├─ MCD (conflict detected?)  ──►  escalate to Tier-2/3
+    │
+    └─ CDDR: Φ(C) ≥ τ₁?  ──►  Tier-1 (local Gemma 3 1B, $0)
+             Φ(C) ≥ τ₂?  ──►  Tier-2 (Claude Sonnet, ~$0.019/q)
+             else         ──►  Tier-3 (Claude Opus, ~$0.076/q)
 ```
 
-A Mermaid diagram source is available at [`docs/architecture.mmd`](docs/architecture.mmd).
+**CDDR** (Retrieval-Confidence-Driven Routing) selects the tier based on the aggregate confidence of retrieved memory items — not query length or keyword heuristics.
 
-## Five Novel Capabilities
+**MCD** (Memory Conflict Detection) scans retrieved items for temporal contradictions (numeric revisions, negations, antonym pairs) and forces escalation when found.
 
-1. **Local zero-cost inference tier** -- On-device models (Ollama) for high-confidence queries at $0.
-2. **Retrieval-confidence routing** -- Evaluates context quality *before* generation, not after.
-3. **Persistent memory with confidence scoring** -- SQLite + FTS5 store with usage tracking, recency decay, and content-hash deduplication.
-4. **Memory Conflict Detection (MCD)** -- Identifies temporal contradictions (negation, numerical, antonym) across stored knowledge and forces escalation to frontier models.
-5. **Confidence-Driven Prompt Shaping (CDPS)** -- Adapts generation strategy to knowledge reliability, producing concise answers when confidence is high and meta-cognitive reasoning when it is low.
+**CDPS** (Confidence-Driven Prompt Shaping) adapts prompt verbosity to retrieval reliability.
+
+## Results
+
+Evaluated on 1,197,316 real user queries from five public corpora (MS MARCO v2.1, WildChat-1M, Natural Questions, MMLU, GSM8K) — all exact-string unique, none authored by us.
+
+| Policy | Policy-Oracle Agreement | Cost/query | vs Opus-only |
+|---|---|---|---|
+| **Lightify CDDR** (English subset, N=1.04M) | **0.958 [0.957, 0.958]** | **$0.0012** | **−98%** |
+| Lightify CDDR (all 1.2M incl. non-English) | 0.913 [0.912, 0.913] | $0.0025 | −96% |
+| Hand-coded keyword router | 0.794 | $0.0007 | −99% |
+| Hand-coded length gateway | 0.324 | $0.0196 | −74% |
+| Naïve Opus-only baseline | 0.000 | $0.076 | — |
+
+Per-source breakdown: MS MARCO / NQ / MMLU = 1.000 (factoid-lookup dominated); WildChat (English) = 0.625; GSM8K = 0.607. Non-English WildChat subset (N=154K) = 0.604.
+
+English subset = queries with pure ASCII text (N=1,043,220); non-English = WildChat queries containing non-ASCII characters (N=154,096).
+
+*Policy-Oracle Agreement (POA) measures routing-decision agreement with a category-level oracle, not per-query output correctness. Per-query cost is a tier-cost projection applied to routing decisions, not measured API spend on 1.2M queries; live spend is reported only in the paper's §V.A 20-query pilot.*
+
+**MCD stress test** (200 pairs: 100 contradictions + 100 controls): Precision 0.943 [0.814, 0.984], Recall 0.330 [0.246, 0.427]. High-precision within its lexical signal set (numeric ratio, 32-entry antonym dict, negation detector).
 
 ## Installation
 
-### Prerequisites
-
-- Python 3.10+
-- [Claude CLI](https://docs.anthropic.com/en/docs/claude-code) (for Tier-2/3 API inference)
-- [Ollama](https://ollama.com/) (optional, for Tier-1 local inference)
-
-### Quick Start
+**Prerequisites:** Python 3.10+, [Claude CLI](https://docs.anthropic.com/en/docs/claude-code) (Tier-2/3), [Ollama](https://ollama.com/) (Tier-1 local)
 
 ```bash
-# Clone the repository
 git clone https://github.com/pavanmanikanta31/lightify.git
 cd lightify
 
-# Create a Python 3.10+ virtual environment
-# (macOS system python3 is often 3.9 — use python3.12 explicitly if needed)
 python3.12 -m venv venv
 source venv/bin/activate
 
-# Upgrade pip (required — older pip cannot install editable pyproject.toml projects)
 pip install --upgrade pip setuptools
-
-# Install in editable mode
 pip install -e .
 
-# First-time setup (verifies dependencies, seeds knowledge base)
 lightify init
 ```
 
-### Setup with script
-
+Or use the setup script:
 ```bash
-chmod +x setup.sh
-./setup.sh
+chmod +x setup.sh && ./setup.sh
 ```
 
-### Ollama (Local Tier-1)
-
+**Ollama (Tier-1 local model):**
 ```bash
-# Install Ollama
 brew install ollama
-
-# Pull a local model (815MB, fast on Apple Silicon)
 ollama pull gemma3:1b
-
-# Start the Ollama server
 ollama serve
 ```
 
 ## Usage
 
-### Query through Lightify
-
 ```bash
-# Route query to cheapest viable model
+# Route a query to the cheapest viable tier
 lightify query "What prevents true thread parallelism in Python?"
 
-# Direct baseline (raw Claude Opus, no Lightify)
-lightify query --baseline "What is the Python GIL?"
-
-# Side-by-side comparison: WITH vs WITHOUT Lightify
+# Compare Lightify vs raw Opus baseline side-by-side
 lightify query --compare "How does Rust handle memory safety?"
-```
 
-### Mode Presets
+# Mode presets
+lightify query --fast "What is a REST API?"       # prefer local
+lightify query --cheap "Explain Docker containers" # avoid API spend
+lightify query --quality "Compare microservices vs monolith"  # frontier
 
-```bash
-# Optimize for speed (prefer local model)
-lightify query --fast "What is a REST API?"
-
-# Optimize for cost (avoid expensive API calls)
-lightify query --cheap "Explain Docker containers"
-
-# Optimize for quality (prefer frontier model)
-lightify query --quality "Compare microservices vs monolith architectures"
-```
-
-### Force a Specific Model
-
-```bash
+# Force a specific tier
 lightify query --model haiku "Quick question"
 lightify query --model sonnet "Medium complexity"
-lightify query --model opus "Complex reasoning task"
+lightify query --model opus "Complex reasoning"
 ```
 
-### Memory Management
-
+**Memory management:**
 ```bash
-# Browse the knowledge base
 lightify memory list
-
-# Add a fact to the knowledge base
-lightify memory add "Python 3.13 removes the GIL with free-threading" --topic python
-
-# Search the knowledge base
+lightify memory add "Python 3.13 removes the GIL" --topic python
 lightify memory search "memory safety"
-
-# Seed with default knowledge
 lightify memory seed
 ```
 
-### Model Configuration
-
+**Config:**
 ```bash
-# Show current model per tier
 lightify config show
-
-# List all available models
-lightify config models
-
-# Change Tier-1 to a larger local model
 lightify config set tier1 gemma3:4b
-
-# Reset to defaults
 lightify config reset
-```
-
-### Status
-
-```bash
-lightify status
 ```
 
 ## Benchmarks
 
-### Run Benchmarks
+Seed queries (240 hand-authored, used as reproducibility anchor) are in `benches/datasets/real/queries_real.json`.
 
 ```bash
-# Simulated ablation study (no API calls needed)
-python -m benches.run_bench
+# Simulated ablation (no API calls, reproducible)
+python benches/run_routing.py
 
-# Real API benchmark (requires Claude CLI + Ollama)
-python -m benches.run_real_bench
+# Real-query benchmark (requires Claude CLI + Ollama)
+python benches/run_real.py
 
-# 20-query grid benchmark across 6 routing strategies
-python -m benches.run_grid_bench
+# MCD stress test (200 contradiction/control pairs)
+python benches/run_mcd_stress.py
 
-# Full evaluation pipeline with oracle + LLM-as-judge
-python -m benches.eval_pipeline
+# LangGraph-style baseline comparison
+python benches/run_langgraph_compare.py
 ```
 
-### Preliminary Results (20-Query Grid)
+Large derived datasets (1.2M queries, result JSONs) are not in this repo. See the paper for the assembly script (`benches/fetch_real_1m.py`) and dataset provenance.
 
-| Approach | Avg Cost | Avg Latency | Avg Quality |
-|----------|----------|-------------|-------------|
-| Local Gemma | $0.000 | 7,320 ms | 96 |
-| Haiku | $0.023 | 7,113 ms | 92 |
-| Sonnet | $0.041 | 12,060 ms | 89 |
-| Opus | $0.087 | 11,162 ms | 92 |
-| **Lightify** | **$0.037** | **8,019 ms** | **81** |
-| LF --fast | $0.028 | 8,028 ms | 84 |
-
-Lightify achieves **57% lower average cost** than always-frontier inference while correctly escalating on all conflict queries. Quality scores reflect keyword-match methodology; LLM-as-judge evaluation is planned for the full study.
-
-### Ablation Study (Simulated)
-
-| Variant | Cost | Tier-2 % | Tier-3 % | Conflicts | SECR Rules |
-|---------|------|----------|----------|-----------|------------|
-| Naive RAG | $0.084 | 0% | 100% | 0 | 0 |
-| Caveman-only | $0.083 | 0% | 100% | 0 | 0 |
-| Hybrid Lightify | $0.077 | 71% | 29% | 8 | 0 |
-| **Full Lightify** | **$0.075** | **71%** | **29%** | **7** | **135** |
-
-## Project Structure
+## Project structure
 
 ```
 lightify/
-  __init__.py           # Package entry point
-  cli.py                # CLI interface (init, query, bench, status, memory, config)
-  pipeline.py           # Simulated pipeline (for reproducible ablation studies)
-  pipeline_real.py      # Real pipeline (Claude CLI + Ollama)
-  types.py              # Shared types (Tier, MemoryItem, ContextCapsule, etc.)
-  config.py             # Model configuration per tier
-  context_builder.py    # Filter, rank (Jaccard), compress
-  compression.py        # Code-block-aware compression + SECR engine
-  confidence.py         # Confidence scoring with Platt scaling
-  conflict.py           # MCD: Memory Conflict Detection
-  prompt_shaper.py      # CDPS: Confidence-Driven Prompt Shaping
-  router.py             # CDDR: Confidence-Driven Dynamic Routing
-  sufficiency.py        # CSE: Context Sufficiency Estimation
-  banner.txt            # ASCII art banner
+  cli.py               # CLI (init, query, bench, status, memory, config)
+  pipeline.py          # Simulated pipeline (reproducible ablation)
+  pipeline_real.py     # Real pipeline (Claude CLI + Ollama)
+  router.py            # CDDR routing logic
+  action_router.py     # Per-action regex overlay (optional, --action-routing)
+  config.py            # Tier model configuration
+  types.py             # Shared types (Tier, MemoryItem, ContextCapsule)
+  context_builder.py   # Retrieve → rank → compress
+  confidence.py        # Confidence scoring
+  conflict.py          # MCD: Memory Conflict Detection
+  prompt_shaper.py     # CDPS: Confidence-Driven Prompt Shaping
+  sufficiency.py       # CSE: Context Sufficiency Estimation
+  compression.py       # SECR compression rules
   models/
-    simulated.py        # Deterministic model simulation for benchmarks
-    claude_cli.py       # Claude CLI adapter (Haiku/Sonnet/Opus)
-    ollama_local.py     # Ollama local model adapter (Gemma, Phi, Llama)
+    claude_cli.py      # Claude CLI adapter
+    ollama_local.py    # Ollama local model adapter
+    simulated.py       # Deterministic simulation for benchmarks
   storage/
-    sqlite_memory.py    # SQLite + FTS5 persistent memory store
+    sqlite_memory.py   # SQLite + FTS5 persistent memory store
 benches/
-  run_bench.py          # Simulated ablation benchmark
-  run_real_bench.py     # Real API benchmark (8 queries)
-  run_full_bench.py     # Extended benchmark
-  run_grid_bench.py     # 20-query grid across 6 strategies
-  eval_pipeline.py      # Oracle + LLM-as-judge evaluation
-  queries_20.py         # 20 evaluation queries (6 categories)
-  generate_data.py      # Memory seeding with knowledge items
-docs/
-  architecture.mmd      # Mermaid diagram source
+  datasets/real/
+    queries_real.json          # 240 seed queries (reproducibility anchor)
+  datasets/mcd/
+    contradictions_100.json    # 100 MCD stress-test pairs
+  datasets/synthetic/
+    queries_200.json            # 200 simulated ablation queries
+  results_real_1197316.json    # CDDR benchmark results (1.2M queries)
+  results_mcd_stress.json      # MCD stress test results (200 pairs)
+  run_routing.py
+  run_real.py
+  run_mcd_stress.py
+  run_langgraph_compare.py
+  fetch_real_1m.py
+  generate_200.py
+tests/
 ```
 
 ## Troubleshooting
 
-**`pip install -e .` fails with "setup.py not found".**
-Upgrade pip: `pip install --upgrade pip setuptools`. Older pip (pre-22.0) cannot build editable installs from `pyproject.toml` alone.
+**`pip install -e .` fails.** Upgrade pip: `pip install --upgrade pip setuptools` (pre-22.0 pip cannot build from `pyproject.toml`).
 
-**`python3` gives Python 3.9 on macOS.**
-The system `python3` is tied to Xcode and often 3.9. Install a newer version: `brew install python@3.12`, then use `python3.12 -m venv venv` explicitly.
+**`python3` gives Python 3.9 on macOS.** Use `python3.12 -m venv venv` explicitly (`brew install python@3.12`).
 
-**`lightify query` errors with "Claude CLI not found".**
-Install the Claude CLI: see [docs.anthropic.com/claude-code](https://docs.anthropic.com/en/docs/claude-code). Tier-2/3 API inference requires it.
+**`lightify query` errors with "Claude CLI not found".** Install from [docs.anthropic.com/claude-code](https://docs.anthropic.com/en/docs/claude-code).
 
-**Ollama isn't running.**
-Lightify falls back to API tiers if Ollama is unavailable — but you lose the zero-cost local tier. Start it with `ollama serve`.
-
-**`lightify memory seed` says memory already exists.**
-Use `lightify memory clear` first if you want to reseed from scratch.
+**Ollama not running.** Lightify falls back to API tiers — start with `ollama serve`.
 
 ## Paper
 
-This work is described in:
-
-> **Lightify: Knowledge-Aware Model Routing via Temporal Consistency of Persistent Memory for LLM Inference Optimization**
-> Pavan Maddula, 2026.
+> **Lightify: Cost-Aware LLM Orchestration via Retrieval-Confidence Routing, Conflict Detection, and Local-First Inference**
+> Pavan Maddula. *IEEE Access*, 2026 (under review).
 > [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)
-
-### BibTeX
 
 ```bibtex
 @article{maddula2026lightify,
-  title     = {Lightify: Knowledge-Aware Model Routing via Temporal Consistency
-               of Persistent Memory for LLM Inference Optimization},
-  author    = {Maddula, Pavan},
-  journal   = {arXiv preprint arXiv:XXXX.XXXXX},
-  year      = {2026},
-  url       = {https://arxiv.org/abs/XXXX.XXXXX}
+  title   = {Lightify: Cost-Aware {LLM} Orchestration via Retrieval-Confidence
+             Routing, Conflict Detection, and Local-First Inference},
+  author  = {Maddula, Pavan},
+  journal = {IEEE Access},
+  year    = {2026},
+  note    = {Under review. Preprint: arXiv:XXXX.XXXXX}
 }
 ```
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+MIT — see [LICENSE](LICENSE).

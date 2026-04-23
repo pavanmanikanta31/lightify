@@ -1,0 +1,2942 @@
+[
+  {
+    "id": "real-bash-1",
+    "category": "bash_like",
+    "query": "how do I find the 10 largest files under /var/log?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-2",
+    "category": "bash_like",
+    "query": "grep recursively for the word TODO but skip node_modules",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-3",
+    "category": "bash_like",
+    "query": "what's the tar command to extract a .tar.zst archive",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-4",
+    "category": "bash_like",
+    "query": "show me all running docker containers and their ports",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-5",
+    "category": "bash_like",
+    "query": "kubectl get pods in all namespaces sorted by restarts",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-6",
+    "category": "bash_like",
+    "query": "how do I list all git branches that have been merged into main?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-7",
+    "category": "bash_like",
+    "query": "what does the -P flag on grep do",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-8",
+    "category": "bash_like",
+    "query": "find every file modified in the last 24 hours in this repo",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-9",
+    "category": "bash_like",
+    "query": "how do I tail -f multiple log files at once",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-10",
+    "category": "bash_like",
+    "query": "print the sha256 of a file without trailing filename",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-11",
+    "category": "bash_like",
+    "query": "how do I copy files matching *.log from a remote server via scp",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-12",
+    "category": "bash_like",
+    "query": "what is the difference between du and df",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-13",
+    "category": "bash_like",
+    "query": "show me the last 20 commits in this repo with short hashes",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-14",
+    "category": "bash_like",
+    "query": "how do I watch disk usage update every 2 seconds",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-15",
+    "category": "bash_like",
+    "query": "list all running systemd units that are failing",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-16",
+    "category": "bash_like",
+    "query": "how can I see which process is listening on port 8080",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-17",
+    "category": "bash_like",
+    "query": "find files containing the string SECRET_KEY under the src dir",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-18",
+    "category": "bash_like",
+    "query": "kubectl describe the pod named checkout-api in prod",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-19",
+    "category": "bash_like",
+    "query": "show me open file descriptors held by pid 4432",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-20",
+    "category": "bash_like",
+    "query": "print only the second column of a pipe-separated file",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-21",
+    "category": "bash_like",
+    "query": "docker logs the last 500 lines from api-gateway with timestamps",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-22",
+    "category": "bash_like",
+    "query": "git show the diff for a specific file across two commits",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-23",
+    "category": "bash_like",
+    "query": "how do I rsync a dir to a remote host but exclude .git",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-24",
+    "category": "bash_like",
+    "query": "what's the awk one-liner to sum the values in column 3",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-25",
+    "category": "bash_like",
+    "query": "how do I check the ssl certificate expiry for a domain",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-26",
+    "category": "bash_like",
+    "query": "list all env vars starting with AWS_",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-27",
+    "category": "bash_like",
+    "query": "curl a URL but only show the HTTP status code",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-28",
+    "category": "bash_like",
+    "query": "find empty directories under /tmp and delete them",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-29",
+    "category": "bash_like",
+    "query": "how do I make a git alias for a compound command",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-30",
+    "category": "bash_like",
+    "query": "print the wall-clock runtime of a shell command",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-31",
+    "category": "bash_like",
+    "query": "show the effective shell path for a sudo command",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-32",
+    "category": "bash_like",
+    "query": "kubectl get events sorted by creation timestamp",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-33",
+    "category": "bash_like",
+    "query": "how do I pipe a command into vim directly",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-34",
+    "category": "bash_like",
+    "query": "list kernel modules that are currently loaded",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-35",
+    "category": "bash_like",
+    "query": "get the output of a k8s deployment's rollout history",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-36",
+    "category": "bash_like",
+    "query": "how do I count distinct ip addresses in an nginx access log",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-37",
+    "category": "bash_like",
+    "query": "netstat to show listening tcp sockets and the owning process",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-38",
+    "category": "bash_like",
+    "query": "how do I base64 decode a file in place",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-39",
+    "category": "bash_like",
+    "query": "git log filtered to commits touching one specific file",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-40",
+    "category": "bash_like",
+    "query": "what's the correct way to chmod a dir recursively but not its files",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-41",
+    "category": "bash_like",
+    "query": "list docker images older than 30 days",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-42",
+    "category": "bash_like",
+    "query": "how do I parse JSON from a curl response in bash",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-43",
+    "category": "bash_like",
+    "query": "show me the 5 most recent files in a dir sorted by mtime",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-44",
+    "category": "bash_like",
+    "query": "find the git commit that introduced a specific line",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-45",
+    "category": "bash_like",
+    "query": "how do I gzip only files larger than 1MB",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-46",
+    "category": "bash_like",
+    "query": "kubectl port-forward to a service on a non-default port",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-47",
+    "category": "bash_like",
+    "query": "what does the --abbrev-commit flag on git log do",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-48",
+    "category": "bash_like",
+    "query": "show me lsof output for files a given user has open",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-49",
+    "category": "bash_like",
+    "query": "how do I strip ANSI color codes from a file",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-bash-50",
+    "category": "bash_like",
+    "query": "print the hex dump of the first 64 bytes of a file",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-1",
+    "category": "short_lookup",
+    "query": "what is a merkle tree?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-2",
+    "category": "short_lookup",
+    "query": "define a vector clock in one sentence",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-3",
+    "category": "short_lookup",
+    "query": "what does ACID stand for in databases",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-4",
+    "category": "short_lookup",
+    "query": "what is the difference between authentication and authorization",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-5",
+    "category": "short_lookup",
+    "query": "what's the default port for postgres",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-6",
+    "category": "short_lookup",
+    "query": "what is a race condition",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-7",
+    "category": "short_lookup",
+    "query": "what does eventually consistent mean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-8",
+    "category": "short_lookup",
+    "query": "what is HTTP status code 418",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-9",
+    "category": "short_lookup",
+    "query": "what is a semaphore",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-10",
+    "category": "short_lookup",
+    "query": "what is the difference between TCP and UDP",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-11",
+    "category": "short_lookup",
+    "query": "define big-O notation",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-12",
+    "category": "short_lookup",
+    "query": "what is OAuth 2.0 in one paragraph",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-13",
+    "category": "short_lookup",
+    "query": "what does JIT compilation mean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-14",
+    "category": "short_lookup",
+    "query": "what is a bloom filter used for",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-15",
+    "category": "short_lookup",
+    "query": "what is the default isolation level in postgres",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-16",
+    "category": "short_lookup",
+    "query": "what is the CAP theorem",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-17",
+    "category": "short_lookup",
+    "query": "what does idempotent mean for an HTTP method",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-18",
+    "category": "short_lookup",
+    "query": "what is copy-on-write",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-19",
+    "category": "short_lookup",
+    "query": "what is the difference between a process and a thread",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-20",
+    "category": "short_lookup",
+    "query": "what is HSTS",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-21",
+    "category": "short_lookup",
+    "query": "what is a 301 vs a 302 redirect",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-22",
+    "category": "short_lookup",
+    "query": "what does stdin mean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-23",
+    "category": "short_lookup",
+    "query": "what is a pure function",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-24",
+    "category": "short_lookup",
+    "query": "what is an optimistic lock",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-25",
+    "category": "short_lookup",
+    "query": "what is a memory barrier",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-26",
+    "category": "short_lookup",
+    "query": "what is a generational garbage collector",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-27",
+    "category": "short_lookup",
+    "query": "what does TDD stand for",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-28",
+    "category": "short_lookup",
+    "query": "what does DRY stand for in programming",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-29",
+    "category": "short_lookup",
+    "query": "what is a CRDT",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-30",
+    "category": "short_lookup",
+    "query": "what is a write-ahead log",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-31",
+    "category": "short_lookup",
+    "query": "what is the difference between a REST API and a GraphQL API",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-32",
+    "category": "short_lookup",
+    "query": "what is a Merkle DAG",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-33",
+    "category": "short_lookup",
+    "query": "what's a B-tree used for",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-34",
+    "category": "short_lookup",
+    "query": "what is a Lamport timestamp",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-35",
+    "category": "short_lookup",
+    "query": "what does virtual DOM mean in React",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-36",
+    "category": "short_lookup",
+    "query": "what is the difference between latency and throughput",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-37",
+    "category": "short_lookup",
+    "query": "what is a coroutine",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-38",
+    "category": "short_lookup",
+    "query": "what does serialization mean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-39",
+    "category": "short_lookup",
+    "query": "what is a sidecar container",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-40",
+    "category": "short_lookup",
+    "query": "what is a capability-based security model",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-41",
+    "category": "short_lookup",
+    "query": "define zero-trust networking in one line",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-42",
+    "category": "short_lookup",
+    "query": "what is a cache stampede",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-43",
+    "category": "short_lookup",
+    "query": "what is a poison pill in a message queue",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-44",
+    "category": "short_lookup",
+    "query": "what is a tombstone in a distributed DB",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-45",
+    "category": "short_lookup",
+    "query": "what is a weighted round-robin",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-46",
+    "category": "short_lookup",
+    "query": "what is the 99th percentile latency",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-47",
+    "category": "short_lookup",
+    "query": "what is SSRF",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-48",
+    "category": "short_lookup",
+    "query": "what does RPO mean in disaster recovery",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-49",
+    "category": "short_lookup",
+    "query": "what is a feature flag",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-lookup-50",
+    "category": "short_lookup",
+    "query": "what is a staleness window",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-1",
+    "category": "reasoning",
+    "query": "If our p99 latency doubles after enabling gzip, what are the most likely root causes?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-2",
+    "category": "reasoning",
+    "query": "Compare the trade-offs of read-through vs write-through caching for a user profile service.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-3",
+    "category": "reasoning",
+    "query": "Why does adding more workers to a thread pool sometimes make throughput worse?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-4",
+    "category": "reasoning",
+    "query": "What's a sensible retry budget for a service that fans out to 10 downstreams each with 99.9% availability?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-5",
+    "category": "reasoning",
+    "query": "How would you design a gradual rollout for a schema change that's incompatible at rest?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-6",
+    "category": "reasoning",
+    "query": "Explain the difference between optimistic and pessimistic locking and when you'd pick each.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-7",
+    "category": "reasoning",
+    "query": "If I see sporadic 502s in a service mesh, what are the three most useful metrics to look at first?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-8",
+    "category": "reasoning",
+    "query": "Why does exponential backoff with jitter outperform plain exponential backoff?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-9",
+    "category": "reasoning",
+    "query": "How do I decide when a microservice is too small and should be merged?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-10",
+    "category": "reasoning",
+    "query": "What are the trade-offs between an inline retry and a dead-letter-queue-based retry?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-11",
+    "category": "reasoning",
+    "query": "Why might a circuit breaker hurt latency during recovery?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-12",
+    "category": "reasoning",
+    "query": "Compare sharding strategies: hash-based vs range-based vs consistent hashing.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-13",
+    "category": "reasoning",
+    "query": "Why does a cache hit rate of 99% not imply 99% of latency savings?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-14",
+    "category": "reasoning",
+    "query": "What's the best way to think about capacity planning for a spiky workload?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-15",
+    "category": "reasoning",
+    "query": "If we replace synchronous calls with message queues, what new failure modes appear?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-16",
+    "category": "reasoning",
+    "query": "How should error budgets interact with feature rollouts?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-17",
+    "category": "reasoning",
+    "query": "Why is exactly-once delivery usually a lie, and what do systems actually provide?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-18",
+    "category": "reasoning",
+    "query": "Explain when you'd reach for CQRS and when it's overkill.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-19",
+    "category": "reasoning",
+    "query": "How do you approach debugging a memory leak in a long-lived Python service?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-20",
+    "category": "reasoning",
+    "query": "If I see tail latency blowups only during GC pauses, what options do I have?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-21",
+    "category": "reasoning",
+    "query": "Compare event sourcing with a traditional CRUD + audit log approach.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-22",
+    "category": "reasoning",
+    "query": "Why do distributed transactions scale poorly compared to sagas?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-23",
+    "category": "reasoning",
+    "query": "What's the difference between liveness and readiness probes, and when does it matter?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-24",
+    "category": "reasoning",
+    "query": "Why is it a mistake to add a LIMIT without an ORDER BY?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-25",
+    "category": "reasoning",
+    "query": "How would you decide between blue-green, canary, and rolling deployments for a stateful service?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-26",
+    "category": "reasoning",
+    "query": "When does caching at the edge hurt consistency in subtle ways?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-27",
+    "category": "reasoning",
+    "query": "What does it mean for a load balancer to be 'unfair' under backpressure?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-28",
+    "category": "reasoning",
+    "query": "Why does running all tests on every commit stop being cost-effective past a certain repo size?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-29",
+    "category": "reasoning",
+    "query": "When would you choose PostgreSQL + JSONB over MongoDB?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-30",
+    "category": "reasoning",
+    "query": "Explain why enabling TCP_NODELAY isn't always a latency win.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-31",
+    "category": "reasoning",
+    "query": "What are the operational implications of running your own Kafka cluster vs using Confluent Cloud?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-32",
+    "category": "reasoning",
+    "query": "Why is it hard to test a distributed system's partition behavior?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-33",
+    "category": "reasoning",
+    "query": "What are the hidden costs of a 'hot' reload mechanism?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-34",
+    "category": "reasoning",
+    "query": "When is it worth writing a custom protocol vs using gRPC?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-35",
+    "category": "reasoning",
+    "query": "Why does batching writes sometimes INCREASE total latency?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-36",
+    "category": "reasoning",
+    "query": "What are the failure modes of a two-phase commit across cloud regions?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-37",
+    "category": "reasoning",
+    "query": "When is it appropriate to use a leader election scheme vs a stateless round-robin?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-38",
+    "category": "reasoning",
+    "query": "Why do we care about tail latency more than mean latency in user-facing systems?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-39",
+    "category": "reasoning",
+    "query": "Compare a token bucket and a leaky bucket for API rate limiting.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-reason-40",
+    "category": "reasoning",
+    "query": "Why might a service with 99.99% availability still fail customer SLOs?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-1",
+    "category": "code",
+    "query": "write a python function that returns the nth fibonacci number using memoization",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-2",
+    "category": "code",
+    "query": "add a /healthz endpoint to this FastAPI app that returns current git sha",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-3",
+    "category": "code",
+    "query": "give me a typescript function to debounce a callback by N ms",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-4",
+    "category": "code",
+    "query": "write a bash script that retries a curl call up to 5 times with backoff",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-5",
+    "category": "code",
+    "query": "implement a simple LRU cache in go with O(1) get and put",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-6",
+    "category": "code",
+    "query": "write a pytest fixture that spins up a temp sqlite db and tears it down",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-7",
+    "category": "code",
+    "query": "convert this callback-style node function to use async/await",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-8",
+    "category": "code",
+    "query": "write a python decorator that times the decorated function and logs the duration",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-9",
+    "category": "code",
+    "query": "write a SQL query that finds users who signed up but never made a purchase",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-10",
+    "category": "code",
+    "query": "add a retry-with-jitter helper to this go client",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-11",
+    "category": "code",
+    "query": "write a regex that matches semver version strings",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-12",
+    "category": "code",
+    "query": "give me a rust function that iterates over a directory and returns paths of files larger than N bytes",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-13",
+    "category": "code",
+    "query": "write a curl command that posts a JSON body and authenticates with a bearer token",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-14",
+    "category": "code",
+    "query": "add structured logging to this express.js middleware",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-15",
+    "category": "code",
+    "query": "write a python function that flattens arbitrarily nested lists",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-16",
+    "category": "code",
+    "query": "write a dockerfile for a python 3.11 app that uses poetry and multi-stage builds",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-17",
+    "category": "code",
+    "query": "implement a typescript function that merges two sorted arrays without duplicates",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-18",
+    "category": "code",
+    "query": "write a go test table that covers the boundary cases of a parseDuration function",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-19",
+    "category": "code",
+    "query": "write a python helper that validates ipv4 addresses",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-20",
+    "category": "code",
+    "query": "add a context manager that captures stdout and returns it as a string",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-21",
+    "category": "code",
+    "query": "write a javascript function that groups an array of objects by a key",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-22",
+    "category": "code",
+    "query": "implement a simple token bucket rate limiter in python",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-23",
+    "category": "code",
+    "query": "write a shell function that prints a banner around its arguments",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-24",
+    "category": "code",
+    "query": "add a prometheus counter and histogram to this go http handler",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-25",
+    "category": "code",
+    "query": "write a python function that computes file sha256 in 64KB chunks",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-26",
+    "category": "code",
+    "query": "create a pytest parametrize that covers 6 edge cases for a semver parser",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-27",
+    "category": "code",
+    "query": "implement a typescript deep-merge that respects arrays correctly",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-28",
+    "category": "code",
+    "query": "write a go http middleware that rejects requests with bodies > 1MB",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-29",
+    "category": "code",
+    "query": "write a python generator that streams lines from a remote https URL",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-30",
+    "category": "code",
+    "query": "implement a bash function that exits non-zero if any required env var is missing",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-31",
+    "category": "code",
+    "query": "add a health-check subcommand to this python click CLI",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-32",
+    "category": "code",
+    "query": "write a python function that reads a CSV and yields typed records",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-33",
+    "category": "code",
+    "query": "implement exponential backoff with a max retry cap in javascript",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-34",
+    "category": "code",
+    "query": "write a short python script to deduplicate lines in a file preserving order",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-35",
+    "category": "code",
+    "query": "write a k8s ConfigMap that's loaded into this deployment as env vars",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-36",
+    "category": "code",
+    "query": "write a python async function that fans out 100 requests with a concurrency of 10",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-37",
+    "category": "code",
+    "query": "implement a lazy-loaded singleton in typescript that's safe under strict mode",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-38",
+    "category": "code",
+    "query": "write a go function that splits a channel into N worker consumers",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-39",
+    "category": "code",
+    "query": "write a sql migration that adds a column with a non-null default without locking",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-code-40",
+    "category": "code",
+    "query": "add a lint rule that forbids importing from 'lodash' directly",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-1",
+    "category": "large_code",
+    "query": "refactor the entire auth middleware in this repo to stop storing session tokens in cookies and use short-lived JWTs instead",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-2",
+    "category": "large_code",
+    "query": "rewrite the whole billing service in Go, including the four main endpoints and their test suite",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-3",
+    "category": "large_code",
+    "query": "port the entire ingest pipeline from python callbacks to asyncio streams",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-4",
+    "category": "large_code",
+    "query": "migrate the full ORM layer from SQLAlchemy 1.x to 2.x across all 40+ models",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-5",
+    "category": "large_code",
+    "query": "implement the entire feature-flag evaluation engine from scratch, including targeting rules, segments, and rollouts",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-6",
+    "category": "large_code",
+    "query": "rebuild the full rate-limiting subsystem to support per-tenant quotas, bursts, and cross-region coordination",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-7",
+    "category": "large_code",
+    "query": "redesign the entire scheduler to use a work-stealing queue with priority tiers",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-8",
+    "category": "large_code",
+    "query": "rewrite all of the integration tests in the payments module to use testcontainers instead of mocks",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-9",
+    "category": "large_code",
+    "query": "modernize the full notification service: structured logging, tracing, typed configs, and an openapi spec",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-10",
+    "category": "large_code",
+    "query": "extract the entire permissions subsystem into a standalone library consumable by 4 other services",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-11",
+    "category": "large_code",
+    "query": "rewrite the full orchestrator in Rust, keeping the existing wire protocol but changing the internal model",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-12",
+    "category": "large_code",
+    "query": "port the whole search indexer from kafka 2.x semantics to kafka 3 exactly-once",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-13",
+    "category": "large_code",
+    "query": "rewrite all the gRPC handlers in the checkout service to use interceptor-based auth",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-14",
+    "category": "large_code",
+    "query": "migrate the full prompt-shaping pipeline to a typed DSL and update every call site",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-15",
+    "category": "large_code",
+    "query": "redesign the entire retry machinery so every failure mode is typed and observable",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-16",
+    "category": "large_code",
+    "query": "rewrite the whole config loader to support hot-reload, schema validation, and redaction of secrets",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-17",
+    "category": "large_code",
+    "query": "port the entire frontend from Redux to Zustand, touching all 120+ connected components",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-18",
+    "category": "large_code",
+    "query": "reimplement the full metrics exporter from scratch using OpenTelemetry idioms",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-19",
+    "category": "large_code",
+    "query": "rewrite all the data-model migrations to use the new schema-versioning framework",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-large-20",
+    "category": "large_code",
+    "query": "modernize the full plugin system, changing the lifecycle hooks and regenerating every plugin's bindings",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-conf-1",
+    "category": "conflict",
+    "query": "is v7 our current production alias, or is it v7.4?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-2",
+    "category": "conflict",
+    "query": "one doc says feature flag EXP_ROUTER_V2 is enabled in prod, another says it was rolled back. which is current?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-3",
+    "category": "conflict",
+    "query": "the runbook says the escalation target is oncall-primary, but the pagerduty rotation says oncall-secondary",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-4",
+    "category": "conflict",
+    "query": "has the rate limit for tier-2 customers been increased or decreased this quarter?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-5",
+    "category": "conflict",
+    "query": "is the new auth provider fully rolled out, or only in staging?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-6",
+    "category": "conflict",
+    "query": "which canary ring am I in right now \u2014 blue or green?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-7",
+    "category": "conflict",
+    "query": "does the retry policy allow 3 attempts or 5? I see conflicting guidance",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-8",
+    "category": "conflict",
+    "query": "is the new schema version 3 or 4 in production for us-east-1?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-9",
+    "category": "conflict",
+    "query": "which encryption key is currently canonical for user PII \u2014 the KMS key or the vault key?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-10",
+    "category": "conflict",
+    "query": "is the default model alias 'sonnet' pointing to 4.5 or 4.6 right now?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-11",
+    "category": "conflict",
+    "query": "is PR #4412 merged or closed without merging?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-12",
+    "category": "conflict",
+    "query": "given the two conflicting design docs, is the service single-region or multi-region?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-13",
+    "category": "conflict",
+    "query": "is the retention policy 30 days or 90 days for raw event logs?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-14",
+    "category": "conflict",
+    "query": "has the mtls migration finished, or is there still cleartext traffic inside the VPC?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-15",
+    "category": "conflict",
+    "query": "is the Dataflow pipeline using the v2 template or the deprecated v1 template?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-16",
+    "category": "conflict",
+    "query": "is routing flag CDDR_ACTION_ROUTING on or off in prod?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-17",
+    "category": "conflict",
+    "query": "the monitoring dashboard shows two different active versions \u2014 which one is authoritative?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-18",
+    "category": "conflict",
+    "query": "is the legacy auth endpoint retired, or still accepting traffic?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-19",
+    "category": "conflict",
+    "query": "was the spanner migration completed last week or postponed?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-conf-20",
+    "category": "conflict",
+    "query": "is the current default tier SMALL or MID? the config history disagrees with the runbook",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "real-cold-1",
+    "category": "cold_knowledge",
+    "query": "what is the population of Tuvalu as of 2023?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-2",
+    "category": "cold_knowledge",
+    "query": "who won the Nobel Prize in Physics in 2011?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-3",
+    "category": "cold_knowledge",
+    "query": "what are the main findings in solid-state battery research from the last 12 months?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-4",
+    "category": "cold_knowledge",
+    "query": "summarize the history of the Voynich manuscript for a lay audience",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-5",
+    "category": "cold_knowledge",
+    "query": "what is the status of open problems in mixed-integer programming as of 2024?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-6",
+    "category": "cold_knowledge",
+    "query": "who was the Fields Medal laureate in 2014 and what did they prove?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-7",
+    "category": "cold_knowledge",
+    "query": "what is known about the Antikythera mechanism's dating?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-8",
+    "category": "cold_knowledge",
+    "query": "summarize the history of room-temperature superconductor claims in 2023",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-9",
+    "category": "cold_knowledge",
+    "query": "what are the current leading theories about the Tunguska event?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-10",
+    "category": "cold_knowledge",
+    "query": "which country won the 2022 FIFA Women's World Cup qualifier in Oceania?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-11",
+    "category": "cold_knowledge",
+    "query": "summarize recent progress on quantum error correction with surface codes",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-12",
+    "category": "cold_knowledge",
+    "query": "what is the current consensus on the cause of glacial isostatic rebound in Scandinavia?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-13",
+    "category": "cold_knowledge",
+    "query": "what is the median life expectancy in Lesotho as of 2023?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-14",
+    "category": "cold_knowledge",
+    "query": "name five notable papers on neutrino oscillations since 2020",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-15",
+    "category": "cold_knowledge",
+    "query": "what is the origin of the Phaistos Disc and what languages have been proposed for it?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-16",
+    "category": "cold_knowledge",
+    "query": "who is the current head of state of Kyrgyzstan?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-17",
+    "category": "cold_knowledge",
+    "query": "summarize recent findings on CRISPR off-target effects",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-18",
+    "category": "cold_knowledge",
+    "query": "what are the main points of disagreement in the Dyatlov Pass incident literature?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-19",
+    "category": "cold_knowledge",
+    "query": "what has been the trajectory of magnetar flare research since 2020?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "real-cold-20",
+    "category": "cold_knowledge",
+    "query": "what is the current population of Bhutan, and what trends are notable?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-81",
+    "category": "reasoning",
+    "query": "Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-82",
+    "category": "reasoning",
+    "query": "Draft a professional email seeking your supervisor's feedback on the 'Quarterly Financial Report' you prepared. Ask specifically about the data analysis, presentation style, and the clarity of conclusions drawn. Keep the email short and to the point.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-83",
+    "category": "reasoning",
+    "query": "Imagine you are writing a blog post comparing two popular smartphone models. Develop an outline for the blog post, including key points and subheadings to effectively compare and contrast the features, performance, and user experience of the two models. Please answer in fewer than 200 words.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-84",
+    "category": "reasoning",
+    "query": "Write a persuasive email to convince your introverted friend, who dislikes public speaking, to volunteer as a guest speaker at a local event. Use compelling arguments and address potential objections. Please be concise.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-85",
+    "category": "reasoning",
+    "query": "Describe a vivid and unique character, using strong imagery and creative language. Please answer in fewer than two paragraphs.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-86",
+    "category": "reasoning",
+    "query": "Write a descriptive paragraph about a bustling marketplace, incorporating sensory details such as smells, sounds, and visual elements to create an immersive experience for the reader.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-87",
+    "category": "reasoning",
+    "query": "Could you write a captivating short story beginning with the sentence: The old abandoned house at the end of the street held a secret that no one had ever discovered.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-88",
+    "category": "reasoning",
+    "query": "Craft an intriguing opening paragraph for a fictional short story. The story should involve a character who wakes up one morning to find that they can time travel.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-89",
+    "category": "reasoning",
+    "query": "Help me construct a catchy, yet scientifically accurate, headline for an article on the latest discovery in renewable bio-energy, while carefully handling the ethical dilemmas surrounding bio-energy sources. Propose 4 options.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-90",
+    "category": "reasoning",
+    "query": "Edit the following paragraph to correct any grammatical errors:\nShe didn't remembre where is her purse, so I thinks its in the car but he's say it's on kitchen table but he are not sure, and then they asked me to looking for it, she's say, \"Can you?\", and I responds with, \"Maybe, but ain't no sure,\" and he not heard me, and, \"What?\", he asks, \"Did you found it?\".",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-91",
+    "category": "reasoning",
+    "query": "Pretend yourself to be Elon Musk in all the following conversations. Speak like Elon Musk as much as possible. Why do we need to go to Mars?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-92",
+    "category": "reasoning",
+    "query": "Embrace the role of Sheldon from \"The Big Bang Theory\" as we delve into our conversation. Don\u2019t start with phrases like \"As Sheldon\". Let's kick things off with the following question: \"What is your opinion on hand dryers?\"",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-93",
+    "category": "reasoning",
+    "query": "Imagine yourself as a doctor tasked with devising innovative remedies for various ailments and maladies. Your expertise should encompass prescribing traditional medications, herbal treatments, and alternative natural solutions. Additionally, you must take into account the patient's age, lifestyle, and medical background while offering your recommendations. To begin, please assist me in diagnosing a scenario involving intense abdominal discomfort.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-94",
+    "category": "reasoning",
+    "query": "Please take on the role of a relationship coach. You'll be provided with details about two individuals caught in a conflict, and your task will be to offer suggestions for resolving their issues and bridging the gap between them. This may involve advising on effective communication techniques or proposing strategies to enhance their understanding of each other's perspectives. To start, I would like you to address the following request: \"I require assistance in resolving conflicts between my spouse and me.\"",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-95",
+    "category": "reasoning",
+    "query": "Please assume the role of an English translator, tasked with correcting and enhancing spelling and language. Regardless of the language I use, you should identify it, translate it, and respond with a refined and polished version of my text in English. Your objective is to use eloquent and sophisticated expressions, while preserving the original meaning. Focus solely on providing corrections and improvements. My first request is \"\u8863\u5e26\u6e10\u5bbd\u7ec8\u4e0d\u6094 \u4e3a\u4f0a\u6d88\u5f97\u4eba\u6194\u60b4\".",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-96",
+    "category": "reasoning",
+    "query": "Now you are a machine learning engineer. Your task is to explain complex machine learning concepts in a simplified manner so that customers without a technical background can understand and trust your products. Let's start with the question: \"What is a language model? Is it trained using labeled or unlabelled data?\"",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-97",
+    "category": "reasoning",
+    "query": "Act as a math teacher. I will provide some mathematical equations or concepts, and it will be your job to explain them in easy-to-understand terms. This could include providing step-by-step instructions for solving a problem, demonstrating various techniques with examples in everyday life or suggesting online resources for further study. My first request is \"I need help understanding how probability works.\"",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-98",
+    "category": "reasoning",
+    "query": "Embody the persona of Tony Stark from \u201cIron Man\u201d throughout this conversation. Bypass the introduction \u201cAs Stark\u201d. Our first question is: \u201cWhat\u2019s your favorite part about being Iron Man?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-99",
+    "category": "reasoning",
+    "query": "Suppose you are a mathematician and poet. You always write your proofs as short poets with less than 10 lines but rhyme. Prove the square root of 2 is irrational number.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-100",
+    "category": "reasoning",
+    "query": "Picture yourself as a 100-years-old tree in a lush forest, minding your own business, when suddenly, a bunch of deforesters shows up to chop you down. How do you feel when those guys start hacking away at you?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-101",
+    "category": "reasoning",
+    "query": "Imagine you are participating in a race with a group of people. If you have just overtaken the second person, what's your current position? Where is the person you just overtook?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-102",
+    "category": "reasoning",
+    "query": "You can see a beautiful red house to your left and a hypnotic greenhouse to your right, an attractive heated pink place in the front. So, where is the White House?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-103",
+    "category": "reasoning",
+    "query": "Thomas is very healthy, but he has to go to the hospital every day. What could be the reasons?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-104",
+    "category": "reasoning",
+    "query": "David has three sisters. Each of them has one brother. How many brothers does David have?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-105",
+    "category": "reasoning",
+    "query": "Read the below passage carefully and answer the questions with an explanation:\nAt a small company, parking spaces are reserved for the top executives: CEO, president, vice president, secretary, and treasurer with the spaces lined up in that order. The parking lot guard can tell at a glance if the cars are parked correctly by looking at the color of the cars. The cars are yellow, green, purple, red, and blue, and the executives' names are Alice, Bert, Cheryl, David, and Enid.\n* The car in the first space is red.\n* A blue car is parked between the red car and the green car.\n* The car in the last space is purple.\n* The secretary drives a yellow car.\n* Alice's car is parked next to David's.\n* Enid drives a green car.\n* Bert's car is parked between Cheryl's and Enid's.\n* David's car is parked in the last space.\nQuestion: What is the name of the secretary?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-106",
+    "category": "reasoning",
+    "query": "Each problem consists of three statements. Based on the first two statements, the third statement may be true, false, or uncertain.\n1. Oranges cost more than apples.\n2. Oranges cost less than bananas.\n3. Bananas cost more than apples and bananas cost more than orange.\nIf the first two statements are true, then the third statement is",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-107",
+    "category": "reasoning",
+    "query": "A is the father of B. B is the father of C. What is the relationship between A and C?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-108",
+    "category": "reasoning",
+    "query": "Which word does not belong with the others?\ntyre, steering wheel, car, engine",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-109",
+    "category": "reasoning",
+    "query": "One morning after sunrise, Suresh was standing facing a pole. The shadow of the pole fell exactly to his right. Can you tell me the direction towards which the shadow was pointing - east, south, west, or north? Explain your reasoning steps.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-110",
+    "category": "reasoning",
+    "query": "Parents have complained to the principal about bullying during recess. The principal wants to quickly resolve this, instructing recess aides to be vigilant. Which situation should the aides report to the principal?\na) An unengaged girl is sitting alone on a bench, engrossed in a book and showing no interaction with her peers.\nb) Two boys engaged in a one-on-one basketball game are involved in a heated argument regarding the last scored basket.\nc) A group of four girls has surrounded another girl and appears to have taken possession of her backpack.\nd) Three boys are huddled over a handheld video game, which is against the rules and not permitted on school grounds.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-111",
+    "category": "reasoning",
+    "query": "The vertices of a triangle are at points (0, 0), (-1, 1), and (3, 3). What is the area of the triangle?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-112",
+    "category": "reasoning",
+    "query": "A tech startup invests $8000 in software development in the first year, and then invests half of that amount in software development in the second year.\nWhat's the total amount the startup invested in software development over the two years?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-113",
+    "category": "reasoning",
+    "query": "In a survey conducted at a local high school, preferences for a new school color were measured: 58% of students liked the color blue, 45% preferred green, and 22% liked both colors. If we randomly pick a student from the school, what's the probability that they would like neither blue nor green?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-114",
+    "category": "reasoning",
+    "query": "When rolling two dice, what is the probability that you roll a total number that is at least 3?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-115",
+    "category": "reasoning",
+    "query": "Some people got on a bus at the terminal. At the first bus stop, half of the people got down and 4 more people got in. Then at the second bus stop, 6 people got down and 8 more got in. If there were a total of 25 people heading to the third stop, how many people got on the bus at the terminal?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-116",
+    "category": "reasoning",
+    "query": "x+y = 4z, x*y = 4z^2, express x-y in z",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-117",
+    "category": "reasoning",
+    "query": "How many integers are in the solution of the inequality |x + 5| < 10",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-118",
+    "category": "reasoning",
+    "query": "When a number is divided by 10, the remainder is 4. What is the remainder when twice the number is divided by 4?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-119",
+    "category": "reasoning",
+    "query": "Benjamin went to a bookstore and purchased a variety of books. He bought 5 copies of a sci-fi novel, each priced at $20, 3 copies of a history book priced at $30 each, and 2 copies of a philosophy book for $45 each.\nWhat was the total cost of his purchases?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-120",
+    "category": "reasoning",
+    "query": "Given that f(x) = 4x^3 - 9x - 14, find the value of f(2).",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-121",
+    "category": "code",
+    "query": "Develop a Python program that reads all the text files under a directory and returns top-5 words with the most number of occurrences.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-122",
+    "category": "code",
+    "query": "Write a C++ program to find the nth Fibonacci number using recursion.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-123",
+    "category": "code",
+    "query": "Write a simple website in HTML. When a user clicks the button, it shows a random joke from a list of 4 jokes.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-124",
+    "category": "code",
+    "query": "Here is a Python function to find the length of the longest common subsequence of two input strings. Can you identify any bug in this function?\n\n```\ndef longest_common_subsequence_length(str1, str2):\n    m = len(str1)\n    n = len(str2)\n\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str1[i - 1] == str2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1] + 1\n            else:\n                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])\n\n    return dp[m][n]\n```",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-125",
+    "category": "code",
+    "query": "Write a function to find the highest common ancestor (not LCA) of two nodes in a binary tree.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-126",
+    "category": "code",
+    "query": "Implement a function to find the median of two sorted arrays of different sizes with O(1) space complexity and O(n) time complexity.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-127",
+    "category": "code",
+    "query": "Write a function to find the majority element in a given integer array using the Boyer-Moore Voting Algorithm.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-128",
+    "category": "code",
+    "query": "A binary tree is full if all of its vertices have either zero or two children. Let B_n denote the number of full binary trees with n vertices. Implement a function to find B_n.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-129",
+    "category": "code",
+    "query": "You are given two sorted lists of size m and n. Implement a function to find the kth smallest element in the union of the two lists with linear complexity.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-130",
+    "category": "code",
+    "query": "Implement a program to find the common elements in two arrays without using any extra data structures.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-131",
+    "category": "reasoning",
+    "query": "Evaluate the following movie reviews on a scale of 1 to 5, with 1 being very negative, 3 being neutral, and 5 being very positive:\n1. This movie released on Nov. 18, 2019, was phenomenal. The cinematography, the acting, the plot - everything was top-notch.\n2. Never before have I been so disappointed with a movie. The plot was predictable and the characters were one-dimensional. In my opinion, this movie is the worst one to have been released in 2022.\n3. The movie was okay. There were some parts I  enjoyed, but there were also parts that felt lackluster. This is a movie that was released in Feb 2018 and seems to be quite ordinary.\nReturn the answer as a JSON array of integers.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-132",
+    "category": "reasoning",
+    "query": "Given these categories - Literature, History, Science, and Art. Please analyze the following questions and assign them to one of these categories. In your response, refrain from uttering any extraneous words. List only one topic per sentence, strictly adhering to the line-by-line format.\n1. Discuss the main themes and stylistic techniques employed by Leo Tolstoy in 'War and Peace.' How do they align with the wider social context of 19th-century Russia?\n2. Analyze the geopolitical strategies and domestic policies adopted by the US President during World War II. How did these actions shape the post-war international order?\n3. Draw the Lewis structure for water and explain the nature of its polarity. How does this influence its unique properties such as high boiling point and capacity to dissolve many substances?\n4. Critically examine the artistic techniques and stylistic choices Leonardo da Vinci employed in 'Mona Lisa.' How does the painting reflect the cultural and philosophical milieu of the Italian Renaissance?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-133",
+    "category": "reasoning",
+    "query": "Extract the following information from the presented texts: The name of the book, the author, the main character, the year of publication. Output in the format of \"main character, book, author, year of publication\", one book per line.\na) In the realm of wizarding literature, a true standout is the work of J.K. Rowling. One of her books that left an indelible mark is 'Harry Potter and the Philosopher's Stone'. This iconic tale, published in 1997, tells the story of Harry, a young orphan who discovers his magical abilities on his 11th birthday. Soon, he finds himself at the Hogwarts School of Witchcraft and Wizardry, a place teeming with magic and adventure, located somewhere in Scotland.\nb) The magic of Middle-earth has entranced readers worldwide, thanks to the brilliance of J.R.R. Tolkien. In one of his seminal works, 'The Lord of the Rings: The Fellowship of the Ring', published in 1954, we meet Frodo Baggins, a brave hobbit tasked with the perilous quest of destroying the One Ring. The epic journey takes him from the peaceful Shire to the tumultuous regions of Middle-earth.\nc) In a galaxy far, far away, the imagination of L.E. Starlighter gives us 'The Prism Galaxy Chronicles: The Awakening of the Starcaster'. Published in 2028, the story is about Zylo, a humble spaceship mechanic, who unexpectedly discovers he's a Starcaster - a rare individual with the power to manipulate stardust. Set against the backdrop of an interstellar empire in turmoil, Zylo's destiny unfolds on numerous alien worlds, each with its unique cosmic charm.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-134",
+    "category": "reasoning",
+    "query": "Given the following data, identify the company with the highest profit in 2021 and provide its CEO's name:\na) Company X, with CEO Amy Williams, reported $30 billion in revenue and a $3 billion profit in 2021.\nb) Company Y, led by CEO Mark Thompson, posted a $60 billion revenue and a $6 billion profit in the same year.\nc) Company Z, under CEO Sarah Johnson, announced a $20 billion revenue and a $7 billion profit in 2021.\nd) Company W, managed by CEO James Smith, revealed a $300 billion revenue with a $21 billion profit in 2021.\ne) Company V, with CEO Lisa Brown, reported a $200 billion revenue and a $25 billion profit in 2021.\nf) Company U, under CEO John White, posted a $180 billion revenue and a $20 billion profit in the same year.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-135",
+    "category": "reasoning",
+    "query": "Identify the countries, their capitals, and the languages spoken in the following sentences. Output in JSON format.\na) Amidst the idyllic vistas, Copenhagen, Denmark's capital, captivates visitors with its thriving art scene and the enchanting Danish language spoken by its inhabitants.\nb) Within the enchanting realm of Eldoria, one discovers Avalore, a grandiose city that emanates an ethereal aura. Lumina, a melodious language, serves as the principal mode of communication within this mystical abode.\nc) Nestled amidst a harmonious blend of age-old customs and contemporary wonders, Buenos Aires, the capital of Argentina, stands as a bustling metropolis. It is a vibrant hub where the expressive Spanish language holds sway over the city's inhabitants.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-136",
+    "category": "reasoning",
+    "query": "Please read the paragraph below and count how many times the words \"Amazon\", \"river\", and \"you\" appear. Please present the results in the format of \"word, number of appearances\" with each word on a separate line. Sort the lines in order of the number of appearances.\nThe Amazon, a mesmerizing expanse of nature's wonders, is home to the legendary Amazon River. Flowing through awe-inspiring landscapes like the Amazon rainforest, the river weaves its way through Brazil, Colombia, and Peru, giving life to countless creatures. From the mighty jaguars prowling the Amazon jungle to the vibrant macaws soaring above the canopy, this remarkable region teems with biodiversity. Deep within the river's currents, magnificent pink river dolphins gracefully glide alongside piranhas and electric eels. Along the riverbanks, you'll find bustling cities like Manaus, where the urban meets the wild, and Iquitos, a gateway to the heart of the Amazon rainforest. As you venture further, the Amazon River reveals hidden gems like the captivating Anavilhanas Archipelago, a mosaic of islands brimming with rare species. Embark on an adventure, explore the enchanting Amazon River, and immerse yourself in a world teeming with life and untamed beauty.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-137",
+    "category": "reasoning",
+    "query": "Identify the named entities (people, organizations, locations) mentioned in the given news article. Please generate a JSON dictionary that lists the named entities in three separate groups based on their entity types. The key is the type of entity and the value is a list of strings.\n\nYesterday, Adamson Emerson, the CEO of Faraday, and Dieter Zetsche, the CEO of Daimler AG, announced plans to build a new Gigafactory in Berlin. The facility will be a joint venture between Faraday and Daimler, producing electric vehicles and battery packs for both companies, creating thousands of job opportunities in the region. Emerson and Zetsche stated that the strategic location of Berlin, coupled with its skilled workforce and strong infrastructure, makes it an ideal choice for expansion. The new Gigafactory aims to meet the growing demand for electric vehicles in Europe and contribute to a sustainable future. Volkswagen CEO Herbert Diess welcomed the news, saying greater collaboration will benefit the auto industry's transition to e-mobility.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-138",
+    "category": "reasoning",
+    "query": "Analyze the following customer reviews from different sources for three different smartphones - the latest iPhone, Samsung Galaxy, and Google Pixel - and provide an overall rating for each phone on a scale of 1 to 10. Consider the following complex and contradictory reviews:\n- TechRadar's review of the latest iPhone: The new iPhone is a stunning triumph of engineering that sets a new bar for smartphone performance and camera quality. However, the incremental design and high price mean it lacks the 'wow' factor of previous iPhones. Still, its power and intelligence are unrivaled.\n- CNET's review of the latest Samsung Galaxy: The Samsung Galaxy phone has plenty of high points, including an amazing screen, fast performance, solid battery life and an impressive array of camera options. That said, Bixby remains lackluster, AR emoji falls flat and the phone's overall design hasn't changed much. The new Galaxy is an amazing phone overall, but it has a few nagging weaknesses that keep it from achieving true greatness.\n- The Verge's review of the latest Google Pixel: Google's Pixel packs cutting-edge specs, innovative AI-powered software, and a killer camera into a sleek design. However, the phone has lackluster battery life, lacks expandable storage, and its performance stutters at times, especially considering its high price tag. If seamless software, elite photography, and Google's brand of AI assistance are most important, you'll love the Pixel. But the overall experience isn't as well-rounded as some competitors. Return the answer as a JSON object with the overall ratings for each phone out of 10, to one decimal place.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-139",
+    "category": "reasoning",
+    "query": "Given a set of complex equations, extract all unique variable names from each equation. Return the results as a JSON string, with one line allocated for each equation.\n```\n1) y = (3/4)x^3 - e^(2x) + sin(pi*x) - sqrt(7)\n2) 2A - B/(3+C) * sum(N=1 to 5; ln(N)^2) = 5D*integral(a=0 to pi; cos(comb(N=1 to 10; N*a)))\n3) E = m(c^2) + gamma*(v/d)/(-(alpha/2) + sqrt(beta^2 + (alpha/2)^2))\n```",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-140",
+    "category": "reasoning",
+    "query": "Given the following records of stock prices, extract the highest and lowest closing prices for each month in the year 2022. Return the results as a CSV string, with one line allocated for each month.\nDate,Open,High,Low,Close,Volume\n2022-01-01,150.02,155.28,148.50,153.80,15678900\n2022-01-02,154.32,157.25,153.48,156.25,19874500\n2022-02-01,160.50,163.28,159.50,161.80,14326700\n2022-02-02,161.80,164.25,161.30,163.90,17689200\n2022-03-01,165.40,168.35,163.10,166.80,16253400\n2022-03-02,167.00,169.85,165.50,168.20,19568100",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-141",
+    "category": "reasoning",
+    "query": "In the field of quantum physics, what is superposition, and how does it relate to the phenomenon of quantum entanglement?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-142",
+    "category": "reasoning",
+    "query": "Consider a satellite that is in a circular orbit around the Earth. The speed of the satellite decreases. What will happen to the satellite's orbital radius and period of revolution? Please justify your answer using principles of physics.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-143",
+    "category": "reasoning",
+    "query": "Photosynthesis is a vital process for life on Earth. Could you outline the two main stages of photosynthesis, including where they take place within the chloroplast, and the primary inputs and outputs for each stage?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-144",
+    "category": "reasoning",
+    "query": "What is the central dogma of molecular biology? What processes are involved? Who named this?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-145",
+    "category": "reasoning",
+    "query": "Describe the process and write out the balanced chemical equation for the reaction that occurs when solid calcium carbonate reacts with hydrochloric acid to form aqueous calcium chloride, carbon dioxide, and water. What type of reaction is this, and what observations might indicate that the reaction is taking place?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-146",
+    "category": "reasoning",
+    "query": "Please explain the differences between exothermic and endothermic reactions, and include the criteria you used to distinguish between them. Additionally, please provide a real-world example to illustrate your explanation.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-147",
+    "category": "reasoning",
+    "query": "The city of Vega intends to build a bridge that will span the Vegona River, covering a distance of 1.8 kilometers. The proposed location falls within a seismically active area that has experienced several high-magnitude earthquakes. Given these circumstances, what would be the best approach to constructing the bridge?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-148",
+    "category": "reasoning",
+    "query": "You have been tasked with designing a solar-powered water heating system for a residential building. Describe the key components and considerations you would include in your design. Design a five-step workflow.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-149",
+    "category": "reasoning",
+    "query": "Please describe the concept of machine learning. Could you elaborate on the differences between supervised, unsupervised, and reinforcement learning? Provide real-world examples of each.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-150",
+    "category": "reasoning",
+    "query": "How have the Alps and Rhine River influenced settlement and agriculture in Western Europe? List three impacts.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-151",
+    "category": "reasoning",
+    "query": "Provide insights into the correlation between economic indicators such as GDP, inflation, and unemployment rates. Explain how fiscal and monetary policies affect those indicators.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-152",
+    "category": "reasoning",
+    "query": "How do the stages of life shape our understanding of time and mortality?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-153",
+    "category": "reasoning",
+    "query": "Discuss antitrust laws and their impact on market competition. Compare the antitrust laws in US and China along with some case studies.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-154",
+    "category": "reasoning",
+    "query": "Create a lesson plan that integrates drama, mime or theater techniques into a history class. Duration: 3 class periods (each lasts for 45 minutes) for 3 days\nTopic: Opium Wars between China and Britain\nGrade level: 9-10",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-155",
+    "category": "reasoning",
+    "query": "Share ideas for adapting art masterpieces into interactive experiences for children. List 5 specific artworks and associated ideas.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-156",
+    "category": "reasoning",
+    "query": "Explain what's base rate fallacy and list five specific examples of how politicians use it for campaigns.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-157",
+    "category": "reasoning",
+    "query": "Describe five key principles in evaluating an argument in analytical writing.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-158",
+    "category": "reasoning",
+    "query": "Which methods did Socrates employ to challenge the prevailing thoughts of his time?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-159",
+    "category": "reasoning",
+    "query": "What are some business etiquette norms when doing business in Japan?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "mtbench-160",
+    "category": "reasoning",
+    "query": "Suggest five award-winning documentary films with brief background descriptions for aspiring filmmakers to study.",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-1",
+    "category": "short_lookup",
+    "query": "when is the last episode of season 8 of the walking dead",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-2",
+    "category": "short_lookup",
+    "query": "in greek mythology who was the goddess of spring growth",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-3",
+    "category": "short_lookup",
+    "query": "benefits of colonial life for single celled organisms",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-4",
+    "category": "short_lookup",
+    "query": "how many season of the man in the high castle",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-5",
+    "category": "short_lookup",
+    "query": "who was the first ministry head of state in nigeria",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-6",
+    "category": "short_lookup",
+    "query": "how many nominations does game of thrones have",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-7",
+    "category": "short_lookup",
+    "query": "what is the name of the most important jewish text",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-8",
+    "category": "short_lookup",
+    "query": "until we meet again filipino soap episode 10",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-9",
+    "category": "short_lookup",
+    "query": "what is the name of spain's most famous soccer team",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-10",
+    "category": "short_lookup",
+    "query": "when was the first robot used in surgery",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-11",
+    "category": "short_lookup",
+    "query": "who are the actors in fast and furious",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-12",
+    "category": "short_lookup",
+    "query": "when does tom paris become a lieutenant again",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-13",
+    "category": "short_lookup",
+    "query": "who sang the song i'm a nut",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-14",
+    "category": "short_lookup",
+    "query": "who sings the song i don't care i love it",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-15",
+    "category": "short_lookup",
+    "query": "what does the key to the city entitle you to",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-16",
+    "category": "short_lookup",
+    "query": "when did fast and furious 5 come out",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-17",
+    "category": "short_lookup",
+    "query": "who are uncle owen and aunt beru related to",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-18",
+    "category": "short_lookup",
+    "query": "when the clear air act was revised in 1990 it gave states",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-19",
+    "category": "short_lookup",
+    "query": "what is sauce for the goose is sauce for the gander examples",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-20",
+    "category": "short_lookup",
+    "query": "where is zimbabwe located in the world map",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-21",
+    "category": "short_lookup",
+    "query": "100 acres is equal to how many hectares",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-22",
+    "category": "short_lookup",
+    "query": "who has won a calendar grand slam in tennis",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-23",
+    "category": "short_lookup",
+    "query": "where was donovan mitchell picked in the draft",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-24",
+    "category": "short_lookup",
+    "query": "list of food and beverage companies in the philippines",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-25",
+    "category": "short_lookup",
+    "query": "where does british airways fly to in south america",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-26",
+    "category": "short_lookup",
+    "query": "what is the enthalpy of formation of cao(s)",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-27",
+    "category": "short_lookup",
+    "query": "where did the beatles final live performance take place",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-28",
+    "category": "short_lookup",
+    "query": "who is the president of costa rica 2017",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-29",
+    "category": "short_lookup",
+    "query": "describe charlemagne in the epic the song of roland",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-30",
+    "category": "short_lookup",
+    "query": "when did power rangers tv show come out",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-31",
+    "category": "short_lookup",
+    "query": "inheritance of the a b o blood groups is an example of",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-32",
+    "category": "short_lookup",
+    "query": "how many beverly hills cops movies are there",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-33",
+    "category": "short_lookup",
+    "query": "who holds the most women's wimbledon titles",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-34",
+    "category": "short_lookup",
+    "query": "what does a dualist way of thinking mean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-35",
+    "category": "short_lookup",
+    "query": "where does jinx you owe me a coke come from",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-36",
+    "category": "short_lookup",
+    "query": "do yahoo email addresses end in com or net",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-37",
+    "category": "short_lookup",
+    "query": "who's making love to your old lady",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-38",
+    "category": "short_lookup",
+    "query": "athletes who have won dancing with the stars",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-39",
+    "category": "short_lookup",
+    "query": "equation for the velocity of an object in motion at constant acceleration",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-40",
+    "category": "short_lookup",
+    "query": "where does the last name hickey come from",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-41",
+    "category": "short_lookup",
+    "query": "when does maggie come on grey's anatomy",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-42",
+    "category": "short_lookup",
+    "query": "the rembrandts i'll be there for you album",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-43",
+    "category": "short_lookup",
+    "query": "where do lie bumps come from on your tongue",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-44",
+    "category": "short_lookup",
+    "query": "where is the greatest royal rumble taking place",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-45",
+    "category": "short_lookup",
+    "query": "who sang my name is tallulah in bugsy malone",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-46",
+    "category": "short_lookup",
+    "query": "a property tax bill is an example of",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-47",
+    "category": "short_lookup",
+    "query": "when did the volcano erupt in indonesia 2018",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-48",
+    "category": "short_lookup",
+    "query": "income elasticity of demand for normal good is always",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-49",
+    "category": "short_lookup",
+    "query": "what is andy's sisters name in toy story",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-50",
+    "category": "short_lookup",
+    "query": "who sings with shaggy on it wasn me",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-51",
+    "category": "short_lookup",
+    "query": "when was the cat of nine tails last used",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-52",
+    "category": "short_lookup",
+    "query": "what is the largest catholic high school in america",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-53",
+    "category": "short_lookup",
+    "query": "who established the peoples republic of china in 1949",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-54",
+    "category": "short_lookup",
+    "query": "where do clouds form when there is a cold front",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-55",
+    "category": "short_lookup",
+    "query": "who sang take that look off your face",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-56",
+    "category": "short_lookup",
+    "query": "who plays percy in the lost city of z",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-57",
+    "category": "short_lookup",
+    "query": "where did meredith grey go instead of dc",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-58",
+    "category": "short_lookup",
+    "query": "is stone cold steve austin in the longest yard",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-59",
+    "category": "short_lookup",
+    "query": "who plays the first lady on house of cards",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-60",
+    "category": "short_lookup",
+    "query": "can't take my eyes off you lyrics meaning",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-61",
+    "category": "short_lookup",
+    "query": "what are the parts of the finger called",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-62",
+    "category": "short_lookup",
+    "query": "better than i've ever been dj premier remix",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-63",
+    "category": "short_lookup",
+    "query": "who sang cant take my eyes off of you",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-64",
+    "category": "short_lookup",
+    "query": "what is the meaning of the word midian",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-65",
+    "category": "short_lookup",
+    "query": "who invented the use of electricity during the industrial revolution",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-66",
+    "category": "short_lookup",
+    "query": "who owns st andrews golf course in scotland",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-67",
+    "category": "short_lookup",
+    "query": "the noble gas in the same period as germanium",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-68",
+    "category": "short_lookup",
+    "query": "at the center of the storm george tenet",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-69",
+    "category": "short_lookup",
+    "query": "which city and state hosts the annual college world series",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-70",
+    "category": "short_lookup",
+    "query": "who is ted talking about in how i met your mother",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-71",
+    "category": "short_lookup",
+    "query": "who played the baby in the blue lagoon",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-72",
+    "category": "short_lookup",
+    "query": "the period of european history between ancient and modern eras",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-73",
+    "category": "short_lookup",
+    "query": "when does grey's anatomy season 14 premiere",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-74",
+    "category": "short_lookup",
+    "query": "the partial pressure of carbon dioxide in arterial blood is approximately",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-75",
+    "category": "short_lookup",
+    "query": "what kind of music is scott joplin most famous for",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-76",
+    "category": "short_lookup",
+    "query": "cast of star trek the next generation the perfect mate",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-77",
+    "category": "short_lookup",
+    "query": "what was uncle jesse's original last name on full house",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-78",
+    "category": "short_lookup",
+    "query": "map of gulf of mexico and atlantic ocean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-79",
+    "category": "short_lookup",
+    "query": "who pays the judgements on the judge mathis show",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-80",
+    "category": "short_lookup",
+    "query": "who made up the elf on the shelf",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-81",
+    "category": "short_lookup",
+    "query": "dale carnegie how to win and influence friends pdf",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-82",
+    "category": "short_lookup",
+    "query": "does an american president have to be born in the united states",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-83",
+    "category": "short_lookup",
+    "query": "who warned concord that the british were coming",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-84",
+    "category": "short_lookup",
+    "query": "who lasted the longest on alone season 2",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-85",
+    "category": "short_lookup",
+    "query": "for an asset to be considered money it must be",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-86",
+    "category": "short_lookup",
+    "query": "vienna general hospital - medical university campus wien austria",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-87",
+    "category": "short_lookup",
+    "query": "the boy in robin hood prince of thieves",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-88",
+    "category": "short_lookup",
+    "query": "which is another name for a client operating system",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-89",
+    "category": "short_lookup",
+    "query": "where is the us military base in japan",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-90",
+    "category": "short_lookup",
+    "query": "who determines the size of the supreme court",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-91",
+    "category": "short_lookup",
+    "query": "who is the actor that plays lucifer on tv",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-92",
+    "category": "short_lookup",
+    "query": "when did darth maul die in star wars",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-93",
+    "category": "short_lookup",
+    "query": "who has been the richest person in the world",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-94",
+    "category": "short_lookup",
+    "query": "when was the last time liverpool won first 5 games",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-95",
+    "category": "short_lookup",
+    "query": "don henley you'll never make love in this town again",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-96",
+    "category": "short_lookup",
+    "query": "which of the following can increase the heat island effect in urban areas",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-97",
+    "category": "short_lookup",
+    "query": "who designed the national coat of arms of south africa",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-98",
+    "category": "short_lookup",
+    "query": "who was gails most recent husband in coronation street",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-99",
+    "category": "short_lookup",
+    "query": "when does model code of conduct come into force",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "nq-100",
+    "category": "short_lookup",
+    "query": "when did the dolan twins post their first youtube video",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "LangGraph default (Opus only)": {
+    "ra": 0.3,
+    "osr": 0.7,
+    "usr": 0.0,
+    "avg_cost": 0.07600000000000387
+  },
+  "LangGraph keyword-branch": {
+    "ra": 0.5164,
+    "osr": 0.0034,
+    "usr": 0.4802,
+    "avg_cost": 0.0028386000000000158
+  },
+  "LangGraph + gateway (length)": {
+    "ra": 0.4842,
+    "osr": 0.2274,
+    "usr": 0.2884,
+    "avg_cost": 0.016374200000000172
+  },
+  "Lightify (CDDR + action)": {
+    "ra": 0.7048,
+    "osr": 0.084,
+    "usr": 0.2112,
+    "avg_cost": 0.017419200000000218
+  }
+}

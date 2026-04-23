@@ -11,9 +11,11 @@ Two modes:
 """
 from __future__ import annotations
 
+import hashlib
 import time
 
 from lightify.compression import compress, SECREngine
+from lightify.config import load_budget_config
 from lightify.conflict import apply_conflict_penalties
 from lightify.context_builder import build_context
 from lightify.models.claude_cli import invoke_claude
@@ -25,13 +27,38 @@ from lightify.sufficiency import estimate_sufficiency
 from lightify.types import ContextCapsule, ModelResponse, PipelineResult, Tier
 
 
+def _start_of_day_ts() -> int:
+    """UTC start-of-day (midnight) as unix timestamp."""
+    now = time.time()
+    return int(now - (now % 86400))
+
+
+def _query_hash(q: str) -> str:
+    return hashlib.sha256(q.encode()).hexdigest()[:16]
+
+
 class RealLightifyPipeline:
     """Full Lightify pipeline with real Claude CLI calls."""
 
-    def __init__(self, store: MemoryStore):
+    def __init__(self, store: MemoryStore, action_routing: bool = False):
         self.store = store
-        self.router = Router()
+        self.router = Router(enable_action_routing=action_routing)
         self.secr = SECREngine()
+        self._budget = load_budget_config()
+
+    def _remaining_budget_usd(self) -> float | None:
+        """Compute today's remaining budget for paid-tier calls.
+
+        Returns:
+            None if no cap is configured (unlimited).
+            A non-negative float otherwise — Claude CLI receives this via
+            --max-budget-usd and refuses calls that would exceed it.
+        """
+        cap = float(self._budget.get("max_daily_usd", 0.0) or 0.0)
+        if cap <= 0:
+            return None
+        spent = self.store.spend_since(_start_of_day_ts())
+        return max(0.0, cap - spent)
 
     def run_without_lightify(self, query: str) -> PipelineResult:
         """Baseline: raw query → Claude Opus. No context, no routing."""
@@ -92,8 +119,8 @@ class RealLightifyPipeline:
         shaped_prompt = self.secr.apply(shaped_prompt)
         self.secr.observe(shaped_prompt)
 
-        # Step 7: CDDR — route to model tier
-        route = self.router.route(capsule)
+        # Step 7: CDDR — route to model tier (with optional per-action overlay)
+        route = self.router.route(capsule, query=query)
 
         # Step 8: Execute with cascade (local → Sonnet → Opus)
         tiers_attempted = []
@@ -135,13 +162,15 @@ class RealLightifyPipeline:
                     timeout_s=30,
                 )
             else:
-                # Tier-2/3: Claude API
+                # Tier-2/3: Claude API. Pass remaining daily budget so Claude
+                # CLI enforces the cap per call via --max-budget-usd.
                 response = invoke_claude(
                     prompt=shaped_prompt,
                     tier=tier,
                     system_prompt=system_prompt,
                     max_turns=1,
                     timeout_s=60,
+                    max_budget_usd=self._remaining_budget_usd(),
                 )
 
             total_latency += response.latency_ms
@@ -164,6 +193,19 @@ class RealLightifyPipeline:
 
         # Auto-prune: keep memory store bounded
         self.store.prune(max_items=5000, min_confidence=0.05)
+
+        # Persist the routing trace: one row per query.
+        self.store.insert_trace(
+            query_hash=_query_hash(query),
+            tier_chosen=route.tier.value,
+            tier_reason=route.reason,
+            cascaded=len(tiers_attempted) > 1,
+            cost_usd=total_cost,
+            tokens_in=total_tokens_in,
+            tokens_out=total_tokens_out,
+            latency_ms=total_latency,
+            success=final_response.success,
+        )
 
         return PipelineResult(
             query=query,

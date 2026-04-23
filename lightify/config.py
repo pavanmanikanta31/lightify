@@ -82,3 +82,34 @@ def get_tier_model(tier: str) -> tuple[str, str]:
     models = load_model_config()
     t = models.get(tier, DEFAULT_MODELS.get(tier, {}))
     return t.get("provider", "claude"), t.get("model", "sonnet")
+
+
+# ── Budget ────────────────────────────────────────────────────────────────
+# Spend is measured against the `trace` table in SQLite. A budget of 0
+# disables the cap (default, preserves prior behavior).
+
+DEFAULT_BUDGET = {
+    "max_daily_usd": 0.0,   # 0 = unlimited
+    "on_exceed": "block",   # "block" | "degrade"
+}
+
+
+def load_budget_config() -> dict:
+    try:
+        with open(CONFIG_PATH) as f:
+            cfg = json.load(f)
+        return {**DEFAULT_BUDGET, **cfg.get("budget", {})}
+    except (FileNotFoundError, json.JSONDecodeError):
+        return dict(DEFAULT_BUDGET)
+
+
+def save_budget_config(budget: dict) -> None:
+    os.makedirs(APP_DIR, exist_ok=True)
+    try:
+        with open(CONFIG_PATH) as f:
+            cfg = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        cfg = {}
+    cfg["budget"] = {**DEFAULT_BUDGET, **budget}
+    with open(CONFIG_PATH, "w") as f:
+        json.dump(cfg, f, indent=2)

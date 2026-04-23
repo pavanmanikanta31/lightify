@@ -246,7 +246,10 @@ def cmd_query(args):
     from lightify.types import Tier
 
     store = MemoryStore(DB_PATH)
-    pipeline = RealLightifyPipeline(store)
+    pipeline = RealLightifyPipeline(
+        store,
+        action_routing=bool(getattr(args, "action_routing", False)),
+    )
 
     # --model override: force a specific tier
     model_override = None
@@ -654,6 +657,8 @@ def build_parser() -> argparse.ArgumentParser:
                       help="Optimize for cost (local first, avoid Opus)")
     mode.add_argument("--quality", action="store_true",
                       help="Optimize for quality (prefer Opus, detailed output)")
+    p_query.add_argument("--action-routing", action="store_true",
+                         help="Enable per-action tier overlay (bash/lookup/code classifier)")
 
     # bench
     sub.add_parser("bench", help="Run full benchmark suite")

@@ -1,0 +1,93 @@
+{
+  "tp": 33,
+  "fn": 67,
+  "fp": 2,
+  "tn": 98,
+  "precision": 0.9428571428571428,
+  "recall": 0.33,
+  "f1": 0.48888888888888893,
+  "precision_ci_95": [
+    0.8139261926062996,
+    0.984187170385956
+  ],
+  "recall_ci_95": [
+    0.24562983793895452,
+    0.4269483966028862
+  ],
+  "per_category": {
+    "version_bump": {
+      "tp": 0,
+      "n": 10
+    },
+    "policy_change": {
+      "tp": 6,
+      "n": 10
+    },
+    "numeric_revision": {
+      "tp": 8,
+      "n": 10
+    },
+    "deprecation": {
+      "tp": 1,
+      "n": 10
+    },
+    "team_change": {
+      "tp": 0,
+      "n": 5
+    },
+    "feature_flag": {
+      "tp": 3,
+      "n": 5
+    },
+    "infra_state": {
+      "tp": 1,
+      "n": 10
+    },
+    "security": {
+      "tp": 1,
+      "n": 5
+    },
+    "compliance": {
+      "tp": 2,
+      "n": 5
+    },
+    "pricing": {
+      "tp": 2,
+      "n": 5
+    },
+    "schema_change": {
+      "tp": 2,
+      "n": 5
+    },
+    "api_contract": {
+      "tp": 2,
+      "n": 5
+    },
+    "runbook": {
+      "tp": 2,
+      "n": 5
+    },
+    "dependency": {
+      "tp": 2,
+      "n": 5
+    },
+    "observability": {
+      "tp": 1,
+      "n": 5
+    }
+  },
+  "per_kind": {
+    "negation": {
+      "tp": 6,
+      "n": 18
+    },
+    "numeric": {
+      "tp": 22,
+      "n": 38
+    },
+    "antonym": {
+      "tp": 5,
+      "n": 44
+    }
+  }
+}

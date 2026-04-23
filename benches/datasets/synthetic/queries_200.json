@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "large_code-13",
+    "category": "large_code",
+    "query": "rewrite the full rollout controller in Kotlin",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-37",
+    "category": "short_lookup",
+    "query": "expand the acronym CSRF",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-26",
+    "category": "bash_like",
+    "query": "ps aux | grep containers",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-11",
+    "category": "cold_knowledge",
+    "query": "where does the name the Baghdad Battery come from",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-10",
+    "category": "cold_knowledge",
+    "query": "summarize the history of room-temperature superconductors",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-25",
+    "category": "code",
+    "query": "implement a retry handler that retries with jitter",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-20",
+    "category": "large_code",
+    "query": "port the entire cache layer to Swift 6",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-4",
+    "category": "reasoning",
+    "query": "how does OAuth 2.0 differ from SAML",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-26",
+    "category": "short_lookup",
+    "query": "who is Linus Torvalds?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-37",
+    "category": "bash_like",
+    "query": "what does the --recursive option in ssh do",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-20",
+    "category": "reasoning",
+    "query": "how does SQL differ from TF-IDF",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-4",
+    "category": "conflict",
+    "query": "is the on-call rotation still in effect?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "short_lookup-19",
+    "category": "short_lookup",
+    "query": "who created Kafka",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-12",
+    "category": "cold_knowledge",
+    "query": "who was the runner-up in Venice Biennale in 2011",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-7",
+    "category": "short_lookup",
+    "query": "what is the purpose of UDP",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-33",
+    "category": "bash_like",
+    "query": "kubectl describe persistentvolumeclaims db-primary -n dev",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-14",
+    "category": "reasoning",
+    "query": "how does microservices differ from polyrepo",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-2",
+    "category": "cold_knowledge",
+    "query": "what is the capital of Uzbekistan?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-36",
+    "category": "bash_like",
+    "query": "kubectl logs etcd-0 -n production",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-25",
+    "category": "short_lookup",
+    "query": "expand the acronym MAC",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-13",
+    "category": "reasoning",
+    "query": "compare a monorepo and polyrepo for cascading tiers",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-6",
+    "category": "large_code",
+    "query": "rewrite the full cache layer in Kotlin",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-29",
+    "category": "code",
+    "query": "write a Rust function that slugifies a title",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-39",
+    "category": "short_lookup",
+    "query": "when was Python 3.0 released?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-18",
+    "category": "conflict",
+    "query": "which is current for tier-2 alias: route-A or Strategy B?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "short_lookup-28",
+    "category": "short_lookup",
+    "query": "what does idempotency mean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-34",
+    "category": "bash_like",
+    "query": "wc -l pyproject.toml",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-5",
+    "category": "short_lookup",
+    "query": "how many microseconds make up one decade",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-7",
+    "category": "reasoning",
+    "query": "pros and cons of edge functions in a CLI",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-27",
+    "category": "code",
+    "query": "write a function that rate-limits by token bucket",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-14",
+    "category": "conflict",
+    "query": "is the active branch currently rolled out or rolled back",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "reasoning-26",
+    "category": "reasoning",
+    "query": "why does backpressure leak memory when disk fills?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-1",
+    "category": "code",
+    "query": "generate a unit test for the count_tokens function",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-18",
+    "category": "cold_knowledge",
+    "query": "who was the runner-up in Chess Olympiad in 2020",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-12",
+    "category": "reasoning",
+    "query": "why does leader election fail when a replica is lost?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-10",
+    "category": "bash_like",
+    "query": "kubectl describe secrets canary-v3 -n ingress-nginx",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-40",
+    "category": "bash_like",
+    "query": "cat Makefile",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-16",
+    "category": "large_code",
+    "query": "generate unit tests for all the permissions service methods",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-16",
+    "category": "bash_like",
+    "query": "git show -p",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-8",
+    "category": "short_lookup",
+    "query": "briefly explain copy-on-write",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-22",
+    "category": "reasoning",
+    "query": "explain in detail the trade-offs of sharded writes",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-5",
+    "category": "bash_like",
+    "query": "df -h /test",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-2",
+    "category": "short_lookup",
+    "query": "what is the purpose of REST",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-15",
+    "category": "bash_like",
+    "query": "docker inspect ml-trainer",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-23",
+    "category": "bash_like",
+    "query": "what does the --verbose option in curl do",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-8",
+    "category": "reasoning",
+    "query": "why does backpressure produce false positives when the network partitions?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-3",
+    "category": "reasoning",
+    "query": "what's the cheapest way to implement a changelog pipeline",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-16",
+    "category": "cold_knowledge",
+    "query": "what are the key open problems in gravitational lensing",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-31",
+    "category": "bash_like",
+    "query": "du -sh /proc",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-6",
+    "category": "bash_like",
+    "query": "grep OOMKilled crash.log",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-1",
+    "category": "reasoning",
+    "query": "how do you avoid N+1 queries when running server-side rendering",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-25",
+    "category": "reasoning",
+    "query": "how do you avoid N+1 queries when running caching",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-7",
+    "category": "large_code",
+    "query": "rewrite the full event pipeline in Zig",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-28",
+    "category": "code",
+    "query": "patch the memory store so that it double-counts events no longer happens",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-15",
+    "category": "reasoning",
+    "query": "how does microservices differ from strong consistency",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-16",
+    "category": "reasoning",
+    "query": "how does callbacks differ from polyrepo",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-36",
+    "category": "short_lookup",
+    "query": "what does virtual memory mean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-18",
+    "category": "code",
+    "query": "write a test that covers it double-counts events in the event dispatcher",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-10",
+    "category": "large_code",
+    "query": "port the entire rate-limit middleware to Kotlin",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-14",
+    "category": "bash_like",
+    "query": "ps aux | grep sockets",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-21",
+    "category": "bash_like",
+    "query": "cat Cargo.toml",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-25",
+    "category": "bash_like",
+    "query": "what does the -x flag of systemctl do",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-17",
+    "category": "reasoning",
+    "query": "what happens to the JIT if memory is low",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-19",
+    "category": "conflict",
+    "query": "given the contradictory guidance on the config freeze, what is correct?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "cold_knowledge-6",
+    "category": "cold_knowledge",
+    "query": "what is the Phaistos Disc?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-21",
+    "category": "reasoning",
+    "query": "how would you design a sharded queue for cross-region latency?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-11",
+    "category": "code",
+    "query": "patch the context builder so that it misses the trailing newline no longer happens",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-19",
+    "category": "cold_knowledge",
+    "query": "how did deep-sea hydrothermal vents research progress between 2018 and 2024",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-30",
+    "category": "code",
+    "query": "write a helper that computes the Fibonacci word and returns a generator",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-32",
+    "category": "short_lookup",
+    "query": "is memoization the same as an actor?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-1",
+    "category": "cold_knowledge",
+    "query": "which country won the Nobel Prize in Physics in 2020",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-3",
+    "category": "cold_knowledge",
+    "query": "what are the key open problems in magnetar flares",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-12",
+    "category": "large_code",
+    "query": "implement the entire routing subsystem from scratch",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-17",
+    "category": "bash_like",
+    "query": "docker inspect cache",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-28",
+    "category": "reasoning",
+    "query": "what happens to the heap if memory is low",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-13",
+    "category": "cold_knowledge",
+    "query": "who won the Abel Prize in 2020?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-12",
+    "category": "short_lookup",
+    "query": "how many milliseconds in a year",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-15",
+    "category": "cold_knowledge",
+    "query": "how did cortical microcircuits research progress between 2016 and 2024",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-14",
+    "category": "code",
+    "query": "patch the state reducer so that it misses the trailing newline no longer happens",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-4",
+    "category": "bash_like",
+    "query": "netstat -an | grep containers",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-5",
+    "category": "reasoning",
+    "query": "how would you implement a changelog pipeline",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-16",
+    "category": "short_lookup",
+    "query": "convert 128 bits to gigabytes",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-7",
+    "category": "conflict",
+    "query": "is the auth-token TTL still in effect?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "cold_knowledge-7",
+    "category": "cold_knowledge",
+    "query": "what is the Nazca Lines?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-5",
+    "category": "conflict",
+    "query": "should we use route-A or library B for our use case?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "bash_like-29",
+    "category": "bash_like",
+    "query": "grep [0-9]+ Makefile",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-38",
+    "category": "short_lookup",
+    "query": "is TLS the same as a promise?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-1",
+    "category": "conflict",
+    "query": "should we use library A or Strategy B for the migration?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "short_lookup-29",
+    "category": "short_lookup",
+    "query": "what is gRPC?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-24",
+    "category": "reasoning",
+    "query": "what's the cheapest way to implement a leader election service",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-6",
+    "category": "conflict",
+    "query": "what is the current active branch?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "bash_like-39",
+    "category": "bash_like",
+    "query": "kubectl logs metrics-sink -n ingress-nginx",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-8",
+    "category": "cold_knowledge",
+    "query": "what is the land area of Senegal in km^2",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-1",
+    "category": "bash_like",
+    "query": "du -sh /home/user",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-18",
+    "category": "large_code",
+    "query": "rewrite the full ORM layer in TypeScript",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-9",
+    "category": "short_lookup",
+    "query": "when did Go 1.0 happen",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-19",
+    "category": "code",
+    "query": "patch the auth middleware so that it fails on UTF-8 BOM no longer happens",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-18",
+    "category": "reasoning",
+    "query": "pros and cons of eventual consistency in a sidecar",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-3",
+    "category": "bash_like",
+    "query": "kubectl logs auth-service -n staging",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-10",
+    "category": "reasoning",
+    "query": "how would you design a cross-region failover for operator ergonomics?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-35",
+    "category": "short_lookup",
+    "query": "who is Jeff Dean?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-8",
+    "category": "conflict",
+    "query": "should we use canary-blue or v4 schema for production?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "code-8",
+    "category": "code",
+    "query": "write a helper that computes sha256 and returns a stream",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-12",
+    "category": "conflict",
+    "query": "is Opus pricing paused or private?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "bash_like-27",
+    "category": "bash_like",
+    "query": "cat tsconfig.json",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-8",
+    "category": "bash_like",
+    "query": "grep ERROR package.json",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-2",
+    "category": "code",
+    "query": "add caches responses to the state reducer",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-20",
+    "category": "short_lookup",
+    "query": "when was QUIC released?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-13",
+    "category": "code",
+    "query": "write a function that parses JSON",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-16",
+    "category": "code",
+    "query": "write a helper that computes fibonacci and returns a generator",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-13",
+    "category": "short_lookup",
+    "query": "briefly explain UDP",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-14",
+    "category": "short_lookup",
+    "query": "when did HTTP/2 happen",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-9",
+    "category": "bash_like",
+    "query": "show me handles in /tmp",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-11",
+    "category": "conflict",
+    "query": "is it rolled out or live for blue-green in staging",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "reasoning-11",
+    "category": "reasoning",
+    "query": "explain in detail the trade-offs of caching",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-10",
+    "category": "code",
+    "query": "refactor the auth middleware to use dependency injection",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-9",
+    "category": "reasoning",
+    "query": "what would a good snapshot policy look like for SLO compliance",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-14",
+    "category": "cold_knowledge",
+    "query": "who is the current head of state of Mauritania",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-30",
+    "category": "bash_like",
+    "query": "what does the --recursive option in sed do",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-5",
+    "category": "large_code",
+    "query": "rewrite all the search indexer integrations",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-18",
+    "category": "bash_like",
+    "query": "grep [0-9]+ resolv.conf",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-11",
+    "category": "bash_like",
+    "query": "how do i list users in the staging cluster",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-30",
+    "category": "short_lookup",
+    "query": "when did gRPC 1.0 happen",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-2",
+    "category": "large_code",
+    "query": "port the entire search indexer to TypeScript",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-15",
+    "category": "large_code",
+    "query": "port the entire cache layer to Kotlin",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-3",
+    "category": "short_lookup",
+    "query": "briefly explain backpressure",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-11",
+    "category": "large_code",
+    "query": "rewrite all the scheduler core integrations",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-5",
+    "category": "cold_knowledge",
+    "query": "what currency does Niger use",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-34",
+    "category": "short_lookup",
+    "query": "briefly explain a race condition",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-20",
+    "category": "bash_like",
+    "query": "wc -l Dockerfile",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-3",
+    "category": "code",
+    "query": "implement a pipeline runner that deduplicates requests",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-9",
+    "category": "large_code",
+    "query": "implement the entire rate-limit middleware from scratch",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-22",
+    "category": "short_lookup",
+    "query": "convert 2048 bytes to gigabytes",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-15",
+    "category": "code",
+    "query": "write a helper that checks if a year is leap and returns a dict",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-24",
+    "category": "code",
+    "query": "fix the bug in the auth middleware where it throws on empty input",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-31",
+    "category": "short_lookup",
+    "query": "what does a continuation mean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-14",
+    "category": "large_code",
+    "query": "refactor the entire authentication module",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-27",
+    "category": "short_lookup",
+    "query": "what is the purpose of sharding",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-6",
+    "category": "code",
+    "query": "refactor the pipeline runner to use a proper iterator protocol",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-16",
+    "category": "conflict",
+    "query": "has the on-call rotation changed since last week?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "short_lookup-1",
+    "category": "short_lookup",
+    "query": "convert 512 bytes to microseconds",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-5",
+    "category": "code",
+    "query": "write a function that memoizes a pure function",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-1",
+    "category": "large_code",
+    "query": "port the entire ORM layer to Python 3.13",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-30",
+    "category": "reasoning",
+    "query": "compare CDDR and GraphQL for backward compat",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-20",
+    "category": "code",
+    "query": "patch the router module so that it fails on UTF-8 BOM no longer happens",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-4",
+    "category": "code",
+    "query": "generate a unit test for the evict_cache function",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-2",
+    "category": "reasoning",
+    "query": "compare a monorepo and GraphQL for multi-tenant isolation",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-4",
+    "category": "large_code",
+    "query": "rewrite all the authentication module integrations",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-26",
+    "category": "code",
+    "query": "add debounces events to the token bucket",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-15",
+    "category": "conflict",
+    "query": "the docs say blue-green is production, but the runbook says supported. which is right?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "bash_like-35",
+    "category": "bash_like",
+    "query": "kubectl get jobs -n cert-manager",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-4",
+    "category": "cold_knowledge",
+    "query": "who won the Turing Award in 2020?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-32",
+    "category": "bash_like",
+    "query": "kubectl get statefulsets -n data",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-24",
+    "category": "short_lookup",
+    "query": "expand the acronym RBAC",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-3",
+    "category": "large_code",
+    "query": "redesign the entire search indexer using a typed AST",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-13",
+    "category": "bash_like",
+    "query": "ls -la /usr/local",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-9",
+    "category": "code",
+    "query": "generate a unit test for the resolve_dns function",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-23",
+    "category": "code",
+    "query": "refactor the auth middleware to use a builder",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-6",
+    "category": "short_lookup",
+    "query": "is idempotency the same as a process?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-17",
+    "category": "short_lookup",
+    "query": "what does sharding mean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-29",
+    "category": "reasoning",
+    "query": "how does cross-encoders differ from NoSQL",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-28",
+    "category": "bash_like",
+    "query": "kubectl logs search-head -n istio-system",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-2",
+    "category": "bash_like",
+    "query": "ls -la /var/lib/docker",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-20",
+    "category": "conflict",
+    "query": "the docs say the API is GA, but the runbook says live. which is right?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "conflict-17",
+    "category": "conflict",
+    "query": "which is current for default tier: Strategy A or library B?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "reasoning-23",
+    "category": "reasoning",
+    "query": "compare SQL and monoliths for cross-region latency",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-17",
+    "category": "code",
+    "query": "write a Go function that parses a semver string",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-19",
+    "category": "reasoning",
+    "query": "why does the JIT overshoot when memory is low?",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-10",
+    "category": "short_lookup",
+    "query": "what does MITM stand for?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-8",
+    "category": "large_code",
+    "query": "generate unit tests for all the billing service methods",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-2",
+    "category": "conflict",
+    "query": "is blue-green paused or live?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "reasoning-27",
+    "category": "reasoning",
+    "query": "when should you pick BM25 over long-polling",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-7",
+    "category": "code",
+    "query": "add emits prometheus metrics to the serializer",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-19",
+    "category": "bash_like",
+    "query": "what does the -L flag of find do",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-17",
+    "category": "large_code",
+    "query": "rewrite all the rollout controller integrations",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-17",
+    "category": "cold_knowledge",
+    "query": "what is the capital of Moldova?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-23",
+    "category": "short_lookup",
+    "query": "define virtual memory",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-12",
+    "category": "bash_like",
+    "query": "head -n 1000 Dockerfile",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-7",
+    "category": "bash_like",
+    "query": "cat foo.txt",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-38",
+    "category": "bash_like",
+    "query": "ps aux | grep handles",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-11",
+    "category": "short_lookup",
+    "query": "who created SQLite",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-18",
+    "category": "short_lookup",
+    "query": "how many bits in a decade",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-40",
+    "category": "short_lookup",
+    "query": "define a consistent hash",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-20",
+    "category": "cold_knowledge",
+    "query": "what is the latest research on deep-sea hydrothermal vents?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-21",
+    "category": "short_lookup",
+    "query": "what is the purpose of copy-on-write",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-24",
+    "category": "bash_like",
+    "query": "docker logs green --tail 1000",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "reasoning-6",
+    "category": "reasoning",
+    "query": "pros and cons of eventual consistency in a batch job",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "large_code-19",
+    "category": "large_code",
+    "query": "rewrite all the routing subsystem integrations",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-3",
+    "category": "conflict",
+    "query": "is the escalation target currently canaried or private",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "conflict-10",
+    "category": "conflict",
+    "query": "is mcd-2 paused or live?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "code-22",
+    "category": "code",
+    "query": "patch the config loader so that it swallows errors no longer happens",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-33",
+    "category": "short_lookup",
+    "query": "convert 32 blocks to megabytes",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "bash_like-22",
+    "category": "bash_like",
+    "query": "how can i see all handles owned by nobody",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-9",
+    "category": "conflict",
+    "query": "given the contradictory guidance on the cost estimate, what is correct?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  },
+  {
+    "id": "short_lookup-4",
+    "category": "short_lookup",
+    "query": "is a semaphore the same as a channel?",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "cold_knowledge-9",
+    "category": "cold_knowledge",
+    "query": "who was the runner-up in Venice Biennale in 2016",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-12",
+    "category": "code",
+    "query": "write a function that maps a function over a dict",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "code-21",
+    "category": "code",
+    "query": "write a Ruby function that debounces calls",
+    "oracle_tier": "MID",
+    "has_contradiction": false
+  },
+  {
+    "id": "short_lookup-15",
+    "category": "short_lookup",
+    "query": "define dependency injection",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false
+  },
+  {
+    "id": "conflict-13",
+    "category": "conflict",
+    "query": "what is the current memory backend?",
+    "oracle_tier": "FRONTIER",
+    "has_contradiction": true
+  }
+]

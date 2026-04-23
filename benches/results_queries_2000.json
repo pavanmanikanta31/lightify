@@ -1,0 +1,35 @@
+{
+  "CDDR only": {
+    "ra": 0.6945,
+    "osr": 0.0,
+    "usr": 0.3055,
+    "avg_cost": 0.01577949999999975,
+    "per_tier": {
+      "SMALL": 0.5235,
+      "MID": 0.3585,
+      "FRONTIER": 0.118
+    }
+  },
+  "CDDR + action_router": {
+    "ra": 0.697,
+    "osr": 0.093,
+    "usr": 0.21,
+    "avg_cost": 0.01763199999999953,
+    "per_tier": {
+      "SMALL": 0.3465,
+      "MID": 0.562,
+      "FRONTIER": 0.0915
+    }
+  },
+  "Always Opus (upper bound)": {
+    "ra": 0.3,
+    "osr": 0.7,
+    "usr": 0.0,
+    "avg_cost": 0.07599999999999636,
+    "per_tier": {
+      "SMALL": 0.0,
+      "MID": 0.0,
+      "FRONTIER": 1.0
+    }
+  }
+}

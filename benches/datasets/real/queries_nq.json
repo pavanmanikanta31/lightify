@@ -1,0 +1,802 @@
+[
+  {
+    "id": "nq-1",
+    "category": "short_lookup",
+    "query": "when is the last episode of season 8 of the walking dead",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-2",
+    "category": "short_lookup",
+    "query": "in greek mythology who was the goddess of spring growth",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-3",
+    "category": "short_lookup",
+    "query": "benefits of colonial life for single celled organisms",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-4",
+    "category": "short_lookup",
+    "query": "how many season of the man in the high castle",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-5",
+    "category": "short_lookup",
+    "query": "who was the first ministry head of state in nigeria",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-6",
+    "category": "short_lookup",
+    "query": "how many nominations does game of thrones have",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-7",
+    "category": "short_lookup",
+    "query": "what is the name of the most important jewish text",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-8",
+    "category": "short_lookup",
+    "query": "until we meet again filipino soap episode 10",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-9",
+    "category": "short_lookup",
+    "query": "what is the name of spain's most famous soccer team",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-10",
+    "category": "short_lookup",
+    "query": "when was the first robot used in surgery",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-11",
+    "category": "short_lookup",
+    "query": "who are the actors in fast and furious",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-12",
+    "category": "short_lookup",
+    "query": "when does tom paris become a lieutenant again",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-13",
+    "category": "short_lookup",
+    "query": "who sang the song i'm a nut",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-14",
+    "category": "short_lookup",
+    "query": "who sings the song i don't care i love it",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-15",
+    "category": "short_lookup",
+    "query": "what does the key to the city entitle you to",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-16",
+    "category": "short_lookup",
+    "query": "when did fast and furious 5 come out",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-17",
+    "category": "short_lookup",
+    "query": "who are uncle owen and aunt beru related to",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-18",
+    "category": "short_lookup",
+    "query": "when the clear air act was revised in 1990 it gave states",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-19",
+    "category": "short_lookup",
+    "query": "what is sauce for the goose is sauce for the gander examples",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-20",
+    "category": "short_lookup",
+    "query": "where is zimbabwe located in the world map",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-21",
+    "category": "short_lookup",
+    "query": "100 acres is equal to how many hectares",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-22",
+    "category": "short_lookup",
+    "query": "who has won a calendar grand slam in tennis",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-23",
+    "category": "short_lookup",
+    "query": "where was donovan mitchell picked in the draft",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-24",
+    "category": "short_lookup",
+    "query": "list of food and beverage companies in the philippines",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-25",
+    "category": "short_lookup",
+    "query": "where does british airways fly to in south america",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-26",
+    "category": "short_lookup",
+    "query": "what is the enthalpy of formation of cao(s)",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-27",
+    "category": "short_lookup",
+    "query": "where did the beatles final live performance take place",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-28",
+    "category": "short_lookup",
+    "query": "who is the president of costa rica 2017",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-29",
+    "category": "short_lookup",
+    "query": "describe charlemagne in the epic the song of roland",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-30",
+    "category": "short_lookup",
+    "query": "when did power rangers tv show come out",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-31",
+    "category": "short_lookup",
+    "query": "inheritance of the a b o blood groups is an example of",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-32",
+    "category": "short_lookup",
+    "query": "how many beverly hills cops movies are there",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-33",
+    "category": "short_lookup",
+    "query": "who holds the most women's wimbledon titles",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-34",
+    "category": "short_lookup",
+    "query": "what does a dualist way of thinking mean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-35",
+    "category": "short_lookup",
+    "query": "where does jinx you owe me a coke come from",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-36",
+    "category": "short_lookup",
+    "query": "do yahoo email addresses end in com or net",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-37",
+    "category": "short_lookup",
+    "query": "who's making love to your old lady",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-38",
+    "category": "short_lookup",
+    "query": "athletes who have won dancing with the stars",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-39",
+    "category": "short_lookup",
+    "query": "equation for the velocity of an object in motion at constant acceleration",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-40",
+    "category": "short_lookup",
+    "query": "where does the last name hickey come from",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-41",
+    "category": "short_lookup",
+    "query": "when does maggie come on grey's anatomy",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-42",
+    "category": "short_lookup",
+    "query": "the rembrandts i'll be there for you album",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-43",
+    "category": "short_lookup",
+    "query": "where do lie bumps come from on your tongue",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-44",
+    "category": "short_lookup",
+    "query": "where is the greatest royal rumble taking place",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-45",
+    "category": "short_lookup",
+    "query": "who sang my name is tallulah in bugsy malone",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-46",
+    "category": "short_lookup",
+    "query": "a property tax bill is an example of",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-47",
+    "category": "short_lookup",
+    "query": "when did the volcano erupt in indonesia 2018",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-48",
+    "category": "short_lookup",
+    "query": "income elasticity of demand for normal good is always",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-49",
+    "category": "short_lookup",
+    "query": "what is andy's sisters name in toy story",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-50",
+    "category": "short_lookup",
+    "query": "who sings with shaggy on it wasn me",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-51",
+    "category": "short_lookup",
+    "query": "when was the cat of nine tails last used",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-52",
+    "category": "short_lookup",
+    "query": "what is the largest catholic high school in america",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-53",
+    "category": "short_lookup",
+    "query": "who established the peoples republic of china in 1949",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-54",
+    "category": "short_lookup",
+    "query": "where do clouds form when there is a cold front",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-55",
+    "category": "short_lookup",
+    "query": "who sang take that look off your face",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-56",
+    "category": "short_lookup",
+    "query": "who plays percy in the lost city of z",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-57",
+    "category": "short_lookup",
+    "query": "where did meredith grey go instead of dc",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-58",
+    "category": "short_lookup",
+    "query": "is stone cold steve austin in the longest yard",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-59",
+    "category": "short_lookup",
+    "query": "who plays the first lady on house of cards",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-60",
+    "category": "short_lookup",
+    "query": "can't take my eyes off you lyrics meaning",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-61",
+    "category": "short_lookup",
+    "query": "what are the parts of the finger called",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-62",
+    "category": "short_lookup",
+    "query": "better than i've ever been dj premier remix",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-63",
+    "category": "short_lookup",
+    "query": "who sang cant take my eyes off of you",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-64",
+    "category": "short_lookup",
+    "query": "what is the meaning of the word midian",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-65",
+    "category": "short_lookup",
+    "query": "who invented the use of electricity during the industrial revolution",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-66",
+    "category": "short_lookup",
+    "query": "who owns st andrews golf course in scotland",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-67",
+    "category": "short_lookup",
+    "query": "the noble gas in the same period as germanium",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-68",
+    "category": "short_lookup",
+    "query": "at the center of the storm george tenet",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-69",
+    "category": "short_lookup",
+    "query": "which city and state hosts the annual college world series",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-70",
+    "category": "short_lookup",
+    "query": "who is ted talking about in how i met your mother",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-71",
+    "category": "short_lookup",
+    "query": "who played the baby in the blue lagoon",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-72",
+    "category": "short_lookup",
+    "query": "the period of european history between ancient and modern eras",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-73",
+    "category": "short_lookup",
+    "query": "when does grey's anatomy season 14 premiere",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-74",
+    "category": "short_lookup",
+    "query": "the partial pressure of carbon dioxide in arterial blood is approximately",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-75",
+    "category": "short_lookup",
+    "query": "what kind of music is scott joplin most famous for",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-76",
+    "category": "short_lookup",
+    "query": "cast of star trek the next generation the perfect mate",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-77",
+    "category": "short_lookup",
+    "query": "what was uncle jesse's original last name on full house",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-78",
+    "category": "short_lookup",
+    "query": "map of gulf of mexico and atlantic ocean",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-79",
+    "category": "short_lookup",
+    "query": "who pays the judgements on the judge mathis show",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-80",
+    "category": "short_lookup",
+    "query": "who made up the elf on the shelf",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-81",
+    "category": "short_lookup",
+    "query": "dale carnegie how to win and influence friends pdf",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-82",
+    "category": "short_lookup",
+    "query": "does an american president have to be born in the united states",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-83",
+    "category": "short_lookup",
+    "query": "who warned concord that the british were coming",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-84",
+    "category": "short_lookup",
+    "query": "who lasted the longest on alone season 2",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-85",
+    "category": "short_lookup",
+    "query": "for an asset to be considered money it must be",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-86",
+    "category": "short_lookup",
+    "query": "vienna general hospital - medical university campus wien austria",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-87",
+    "category": "short_lookup",
+    "query": "the boy in robin hood prince of thieves",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-88",
+    "category": "short_lookup",
+    "query": "which is another name for a client operating system",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-89",
+    "category": "short_lookup",
+    "query": "where is the us military base in japan",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-90",
+    "category": "short_lookup",
+    "query": "who determines the size of the supreme court",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-91",
+    "category": "short_lookup",
+    "query": "who is the actor that plays lucifer on tv",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-92",
+    "category": "short_lookup",
+    "query": "when did darth maul die in star wars",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-93",
+    "category": "short_lookup",
+    "query": "who has been the richest person in the world",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-94",
+    "category": "short_lookup",
+    "query": "when was the last time liverpool won first 5 games",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-95",
+    "category": "short_lookup",
+    "query": "don henley you'll never make love in this town again",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-96",
+    "category": "short_lookup",
+    "query": "which of the following can increase the heat island effect in urban areas",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-97",
+    "category": "short_lookup",
+    "query": "who designed the national coat of arms of south africa",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-98",
+    "category": "short_lookup",
+    "query": "who was gails most recent husband in coronation street",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-99",
+    "category": "short_lookup",
+    "query": "when does model code of conduct come into force",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  },
+  {
+    "id": "nq-100",
+    "category": "short_lookup",
+    "query": "when did the dolan twins post their first youtube video",
+    "oracle_tier": "SMALL",
+    "has_contradiction": false,
+    "source": "natural-questions"
+  }
+]
