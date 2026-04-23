@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-brightgreen.svg)](https://www.python.org/downloads/)
 [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0000--5756--100X-a6ce39?logo=orcid)](https://orcid.org/0009-0000-5756-100X)
 
 **Cost-aware LLM orchestration middleware for agent harnesses.**
 
